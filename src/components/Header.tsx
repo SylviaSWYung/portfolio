@@ -1,10 +1,10 @@
 export const Header = () => {
   return (
     <div className="h-15 bg-header border-b-1 border-headerborder flex items-center justify-between">
-      <h1 className="ml-6 font-prata text-text-dark text-2xl ">
+      <h1 className="ml-6 font-inria text-text-dark text-2xl ">
         Sylvia Suet Wai Yung
       </h1>
-      <button type="button" className="font-prata text-lg text-text-dark border-1 rounded-2xl h-8 w-22 bg-button/50 drop-shadow-lg ml-8">
+      <button type="button" className="font-inria text-lg text-text-dark border-1 rounded-2xl h-8 w-22 bg-button/50 shadow-lg ml-8">
         RESUME
       </button>
       <button
