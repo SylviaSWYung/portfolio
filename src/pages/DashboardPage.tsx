@@ -1,9 +1,21 @@
+import { motion } from "framer-motion";
 import { AnimatedText } from "../components/AnimatedText";
 
 export const DashboardPage = () => {
   return (
     <div className="flex flex-col">
-      <div className="flex justify-center">
+      <div className="relative flex justify-center">
+        <motion.img
+          className="absolute left-1/3 z-3 rotate-10 scale-30"
+          src="ribbon.webp"
+          alt=""
+          animate={{ y: [0, -20, 0] }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
         <img
           className="h-1/2 w-1/2 rounded-3xl mt-16 mb-12"
           src="/Sylvia.jpg"
@@ -54,6 +66,17 @@ export const DashboardPage = () => {
           GitHub
         </button>
       </div>
+      <motion.img
+        className="relative mt-5 rotate-12 size-1/2"
+        src="ribbon.webp"
+        alt=""
+        animate={{ y: [0, -20, 0] }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
     </div>
   );
 };
