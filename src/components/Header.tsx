@@ -33,7 +33,7 @@ export const Header = () => {
       </button>
       {/* Dropdown menu */}
       {isExpanded && (
-        <div className="flex flex-col items-center absolute w-full top-15 bg-header ${isExpanded ? 'block' : 'hidden'} p-8 font-inria ">
+        <div className="flex flex-col items-center z-10 absolute w-full top-15 bg-header ${isExpanded ? 'block' : 'hidden'} p-8 font-inria ">
           <a href="/about" className="block text-text-dark hover:text-gray-900">
             ABOUT ME
           </a>

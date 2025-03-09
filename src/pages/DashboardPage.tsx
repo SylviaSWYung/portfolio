@@ -6,8 +6,8 @@ export const DashboardPage = () => {
     <div className="flex flex-col">
       <div className="relative flex justify-center">
         <motion.img
-          className="absolute left-1/3 z-3 rotate-10 scale-30"
-          src="ribbon.webp"
+          className="absolute left-2/5 sm:left-8/12 -rotate-10 scale-20"
+          src="test1.png"
           alt=""
           animate={{ y: [0, -20, 0] }}
           transition={{
@@ -54,7 +54,7 @@ export const DashboardPage = () => {
             window.open("https://www.linkedin.com/in/sylvia-yung", "_blank")
           }
         >
-          LinkedId
+          LinkedIn
         </button>
         <button
           type="button"
@@ -67,8 +67,8 @@ export const DashboardPage = () => {
         </button>
       </div>
       <motion.img
-        className="relative mt-5 rotate-12 size-1/2"
-        src="ribbon.webp"
+        className="relative left-10 mt-5 rotate-12 size-1/3"
+        src="bow.png"
         alt=""
         animate={{ y: [0, -20, 0] }}
         transition={{
