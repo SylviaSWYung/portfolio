@@ -28,7 +28,7 @@ export const DashboardPage = () => {
                 "Developer",
                 "Computer Scientist",
               ]}
-              typingSpeed={100}
+              typingSpeed={150}
               pauseBetweenTexts={2000}
             />
           }
@@ -38,12 +38,18 @@ export const DashboardPage = () => {
         <button
           type="button"
           className="font-inria text-lg text-text-dark border-1 rounded-2xl h-8 w-22 bg-button/50 shadow-lg mr-2 hover:bg-hover/50"
+          onClick={() =>
+            window.open("https://www.linkedin.com/in/sylvia-yung", "_blank")
+          }
         >
           LinkedId
         </button>
         <button
           type="button"
           className="font-inria text-lg text-text-dark border-1 rounded-2xl h-8 w-22 bg-button/50 shadow-lg ml-2 hover:bg-hover/50"
+          onClick={() =>
+            window.open("https://github.com/SylviaSWYung", "_blank")
+          }
         >
           GitHub
         </button>
