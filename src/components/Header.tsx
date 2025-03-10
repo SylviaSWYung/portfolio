@@ -25,7 +25,7 @@ export const Header = () => {
       <button
         type="button"
         onClick={resume}
-        className="font-inria text-lg sm:text-2xl text-text-dark border-1 rounded-2xl h-8 w-22 sm:h-10 sm:w-28 bg-button/50 shadow-lg ml-8 hover:bg-hover/50"
+        className="font-inria text-lg sm:text-2xl text-text-dark border-1 rounded-full h-8 w-22 sm:h-10 sm:w-28 bg-button/50 shadow-lg ml-8 hover:bg-hover/50"
       >
         RESUME
       </button>
