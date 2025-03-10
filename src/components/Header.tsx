@@ -13,11 +13,11 @@ export const Header = () => {
   };
 
   return (
-    <div className="h-15 sm:h-18 bg-header border-b-1 border-headerborder flex items-center justify-between">
-      <h1 className="ml-6 sm:ml-20 font-inria text-text-dark text-2xl sm:text-4xl ">
+    <div className="h-15 sm:h-18 bg-header border-b-1 border-headerborder flex items-center justify-between sm:justify-around">
+      <h1 className="ml-6 sm:ml-0 font-inria text-text-dark text-2xl sm:text-4xl ">
         Sylvia Suet Wai Yung
       </h1>
-      <div className="hidden sm:flex font-inria text-3xl text-text-dark gap-16 hover:text-gray-900">
+      <div className="hidden sm:flex font-inria sm:mr-50 text-3xl text-text-dark gap-16 hover:text-gray-900">
         <a href="/about">ABOUT ME</a>
         <a href="/projects">PROJECT</a>
         <a href="/skills">SKILLS</a>
@@ -25,7 +25,7 @@ export const Header = () => {
       <button
         type="button"
         onClick={resume}
-        className="font-inria text-lg sm:mr-20 sm:text-2xl text-text-dark border-1 rounded-2xl h-8 w-22 sm:h-10 sm:w-28 bg-button/50 shadow-lg ml-8 hover:bg-hover/50"
+        className="font-inria text-lg sm:text-2xl text-text-dark border-1 rounded-2xl h-8 w-22 sm:h-10 sm:w-28 bg-button/50 shadow-lg ml-8 hover:bg-hover/50"
       >
         RESUME
       </button>
