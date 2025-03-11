@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { AnimatedText } from "../components/AnimatedText";
 
-export const DashboardPage = () => {
+export const HomePage = () => {
   return (
     //Mulig fjerne flex-wrap?
     <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-evenly sm:items-center sm:gap-x-4 sm:max-w-full sm:overflow-hidden sm:min-h-screen">
