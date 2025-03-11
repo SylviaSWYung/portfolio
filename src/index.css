@@ -15,4 +15,5 @@ body {
   --color-text-dark: #3b0d0d;
   --color-text-light: #bd9a9a;
   --color-hover: #8b8b8b;
+  --breakpoint-half: 77.9rem;
 }
