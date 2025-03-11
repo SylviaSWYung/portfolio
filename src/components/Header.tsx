@@ -1,5 +1,6 @@
 import { useState } from "react";
 import HamburgerMenu from "./HamburgerMenu";
+import { Link } from "react-router-dom";
 
 function resume() {
   window.open("/Resume.pdf", "_blank");
@@ -14,13 +15,16 @@ export const Header = () => {
 
   return (
     <div className="h-15 sm:h-18 bg-header border-b-1 border-headerborder flex items-center justify-between sm:justify-around">
-      <h1 className="ml-6 sm:ml-0 font-inria text-text-dark text-2xl xl:text-3xl ">
+      <Link
+        to="/"
+        className="ml-6 sm:ml-0 font-inria text-text-dark text-2xl xl:text-3xl"
+      >
         Sylvia Suet Wai Yung
-      </h1>
+      </Link>
       <div className="hidden sm:flex font-inria xl:mr-50 text-2xl xl:text-3xl text-text-dark gap-16 hover:text-gray-900">
-        <a href="/about">ABOUT ME</a>
-        <a href="/projects">PROJECT</a>
-        <a href="/skills">SKILLS</a>
+        <Link to="/about">ABOUT ME</Link>
+        <Link to="/projects">PROJECT</Link>
+        <Link to="/skills">SKILLS</Link>
       </div>
       <button
         type="button"
