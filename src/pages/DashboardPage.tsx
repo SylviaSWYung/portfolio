@@ -7,7 +7,7 @@ export const DashboardPage = () => {
     <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-evenly sm:items-center sm:gap-x-4 sm:max-w-full overflow-hidden min-h-screen">
       <div className="relative flex justify-center sm:order-2">
         <motion.img
-          className="absolute sm:hidden left-2/5 sm:left-8/12 -rotate-10 scale-20"
+          className="absolute left-2/5 sm:left-9/12 -rotate-10 scale-20 sm:scale-30 sm:bottom-2/3"
           src="bow.png"
           alt=""
           animate={{ y: [0, -20, 0] }}
@@ -71,7 +71,7 @@ export const DashboardPage = () => {
         </div>
       </div>
       <motion.img
-        className="relative sm:hidden left-10 mt-5 rotate-12 size-1/3"
+        className="relative sm:absolute sm:left-1/20 sm:size-60 sm:bottom-2/3 sm:rotate-25 left-10 mt-5 rotate-12 size-1/3"
         src="bow.png"
         alt=""
         animate={{ y: [0, -20, 0] }}
