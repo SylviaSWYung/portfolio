@@ -6,6 +6,8 @@ const titleProject =
   "border-t-1 border-headerborder flex items-center justify-between h-18";
 
 export const ProjectPage = () => {
+  // const [projectPicture, setProjectPicture] = useState("");
+
   return (
     <div className="flex flex-col min-h-screen items-center">
       <h1 className="font-inria text-headerborder text-4xl mt-10 mb-5">
@@ -31,7 +33,8 @@ export const ProjectPage = () => {
             ease: "easeInOut",
           }}
         />
-        <div className="border-t-1 border-headerborder flex items-center justify-between h-18">
+        {/*Prosjekt 1 */}
+        <div className={titleProject}>
           My Website
           <button
             type="button"
@@ -41,6 +44,7 @@ export const ProjectPage = () => {
             Portfolio
           </button>
         </div>
+        {/*Prosjekt 2 */}
         <div className={titleProject}>
           NotaFlow
           <button
@@ -51,6 +55,7 @@ export const ProjectPage = () => {
             React + TS
           </button>
         </div>
+        {/*Prosjekt 3 */}
         <div className={titleProject}>
           Ravioli
           <button
@@ -61,6 +66,7 @@ export const ProjectPage = () => {
             React + TS
           </button>
         </div>
+        {/*Prosjekt 4 */}
         <div className={`${titleProject} border-b-1`}>
           Movie Library
           <button
