@@ -14,7 +14,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="h-15 sm:h-18 bg-header border-b-1 border-headerborder flex items-center justify-between sm:justify-around">
+    <div className="h-15 bg-header border-b-1 border-headerborder flex items-center justify-between sm:justify-around">
       <Link
         to="/"
         className="ml-6 sm:ml-0 font-inria text-text-dark text-lg sm:text-2xl xl:text-3xl"
@@ -29,7 +29,7 @@ export const Header = () => {
       <button
         type="button"
         onClick={resume}
-        className="font-inria text-base sm:text-lg xl:text-xl text-text-dark border-1 rounded-full h-7 w-18 sm:h-8 sm:w-22 xl:h-10 xl:w-28 bg-button/50 shadow-lg ml-6 hover:bg-hover/50"
+        className="font-inria text-base sm:text-lg xl:text-xl text-text-dark border-1 rounded-full h-8 w-20 sm:w-22 xl:h-10 xl:w-28 bg-button/50 shadow-lg ml-6 hover:bg-hover/50"
       >
         RESUME
       </button>
@@ -42,7 +42,7 @@ export const Header = () => {
       </button>
       {/* Mobile Dropdown menu */}
       {isExpanded && (
-        <div className="flex flex-col items-center z-10 absolute w-full top-15 bg-header sm:hidden p-8 font-inria ">
+        <div className="flex items-center z-10 absolute w-full text-base top-15 justify-evenly bg-header sm:hidden p-8 font-inria ">
           <a href="/about" className="block text-text-dark hover:text-gray-900">
             ABOUT ME
           </a>
