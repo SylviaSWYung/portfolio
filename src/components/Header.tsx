@@ -17,7 +17,7 @@ export const Header = () => {
     <div className="h-15 sm:h-18 bg-header border-b-1 border-headerborder flex items-center justify-between sm:justify-around">
       <Link
         to="/"
-        className="ml-6 sm:ml-0 font-inria text-text-dark text-2xl xl:text-3xl"
+        className="ml-6 sm:ml-0 font-inria text-text-dark text-lg sm:text-2xl xl:text-3xl"
       >
         Sylvia Suet Wai Yung
       </Link>
@@ -29,7 +29,7 @@ export const Header = () => {
       <button
         type="button"
         onClick={resume}
-        className="font-inria text-lg xl:text-xl text-text-dark border-1 rounded-full h-8 w-22 xl:h-10 xl:w-28 bg-button/50 shadow-lg ml-8 hover:bg-hover/50"
+        className="font-inria text-base sm:text-lg xl:text-xl text-text-dark border-1 rounded-full h-7 w-18 sm:h-8 sm:w-22 xl:h-10 xl:w-28 bg-button/50 shadow-lg ml-6 hover:bg-hover/50"
       >
         RESUME
       </button>

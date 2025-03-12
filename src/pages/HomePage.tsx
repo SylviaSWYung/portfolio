@@ -8,7 +8,7 @@ export const HomePage = () => {
       <div className="relative flex justify-center sm:order-2">
         {/*På høyre side av bildet*/}
         <motion.img
-          className="absolute sm:hidden xl:block left-2/5 top-1/3 sm:left-9/12 -rotate-10 sm:rotate-10 scale-20 sm:scale-30 sm:top-2/3"
+          className="absolute sm:hidden xl:block left-2/6 top-1/3 sm:left-9/12 -rotate-10 sm:rotate-10 scale-20 sm:scale-30 sm:top-2/3"
           src="bow.png"
           alt=""
           animate={{ y: [0, -20, 0] }}
@@ -19,7 +19,7 @@ export const HomePage = () => {
           }}
         />
         <img
-          className="h-1/2 w-1/2 rounded-full mt-16 mb-12 sm:mt-0 sm:w-full sm:max-w-[350px] xl:max-w-[450px]"
+          className="h-1/2 w-1/2 rounded-full mt-12 mb-12 sm:mt-0 sm:w-full sm:max-w-[350px] xl:max-w-[450px]"
           src="/Sylvia.jpg"
           alt="Picture of Sylvia"
         />
@@ -30,11 +30,11 @@ export const HomePage = () => {
         <p className="font-inria text-text-light text-4xl xl:text-7xl sm:mb-5">
           Hi, My name is
         </p>
-        <p className="flex justify-end sm:justify-center font-inria text-headerborder text-6xl mt-4 mb-6 xl:text-8xl">
+        <p className="flex justify-center sm:justify-center font-inria text-headerborder text-4xl sm:text-6xl mt-4 mb-6 xl:text-8xl">
           {" "}
           Sylvia Yung
         </p>
-        <div className="font-inria h-20 sm:mt-5">
+        <div className="font-inria h-14 sm:h-20 sm:mt-5">
           {
             <AnimatedText
               textArray={[
@@ -50,7 +50,7 @@ export const HomePage = () => {
         </div>
 
         {/*Buttons*/}
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-4 sm:mt-8">
           <button
             type="button"
             className="font-inria text-lg sm:text-2xl xl:text-3xl text-text-dark border-1 rounded-full h-8 w-22 sm:h-12 xl:h-16 sm:w-33 xl:w-44 bg-button/50 shadow-lg mr-2 hover:bg-hover/50"
