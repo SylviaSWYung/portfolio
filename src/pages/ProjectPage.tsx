@@ -1,23 +1,59 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
-const buttonInText =
-  "text-base sm:text-2xl xl:text-3xl text-text-dark border-1 rounded-full h-8 w-22 sm:h-12 xl:h-16 sm:w-33 xl:w-44 bg-button";
+const inText =
+  "text-base sm:text-2xl xl:text-3xl text-text-dark border-b-1 border-dashed";
 const titleProject =
-  "border-t-1 border-headerborder flex items-center justify-between h-16";
+  "border-t-1 border-headerborder flex items-center h-16 justify-between w-full";
 
 export const ProjectPage = () => {
-  // const [projectPicture, setProjectPicture] = useState<string | null>(null);
+  const [projectPicture, setProjectPicture] = useState<string | null>(null);
+
+  const projects = [
+    {
+      name: "My Website",
+      image: "project/portfolio.png",
+      link: "https://github.com/SylviaSWYung/portfolio",
+      skills: "Portfolio",
+    },
+    {
+      name: "NotaFlow",
+      image: "project/notaflow.png",
+      link: "--",
+      skills: "React + TS",
+    },
+    {
+      name: "Ravioli",
+      image: "project/Infoskjermen.png",
+      link: "https://github.com/appKom/ravioli",
+      skills: "React + TS",
+    },
+    {
+      name: "Movie Library",
+      image: "project/MovieLibrary.png",
+      link: "https://github.com/SylviaSWYung/Movie_library",
+      skills: "Java",
+    },
+  ];
 
   return (
     <div className="flex flex-col min-h-screen items-center">
       <h1 className="font-inria text-headerborder text-3xl sm:text-4xl mt-10 mb-5">
-        University Projects
+        Projects
       </h1>
       {/*Boks for bilde */}
-      <div className="border-4 text-headerborder bg-button/50 rounded-4xl p-4 m-4 min-h-50 min-w-50">
-        <p>Bilde her</p>
+      <div className="border-4 text-headerborder bg-button/50 rounded-3xl m-4 p-2 h-40 w-80 flex items-center justify-center overflow:hidden">
+        {projectPicture ? (
+          <img
+            src={projectPicture}
+            alt="Project"
+            className="w-full h-full object-contain rounded-xl"
+          />
+        ) : (
+          <p></p>
+        )}
       </div>
-      <div className="flex-col w-4/5 overflow-hidden font-inria text-text-dark text-xl sm:text-3xl">
+      <div className="flex-col w-4/5 overflow-hidden font-inria text-text-dark text-xl sm:text-3xl border-b-1 border-headerborder">
         <motion.img
           className="size-1/12"
           src="chicken.gif"
@@ -33,50 +69,24 @@ export const ProjectPage = () => {
             ease: "easeInOut",
           }}
         />
-        {/*Prosjekt 1 */}
-        <div className={titleProject}>
-          My Website
-          <button
-            type="button"
-            className={buttonInText}
-            onClick={() => window.open("__", "_blank")}
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className={titleProject}
+            onMouseEnter={() => setProjectPicture(project.image)}
+            onMouseLeave={() => setProjectPicture(null)}
           >
-            Portfolio
-          </button>
-        </div>
-        {/*Prosjekt 2 */}
-        <div className={titleProject}>
-          NotaFlow
-          <button
-            type="button"
-            className={buttonInText}
-            onClick={() => window.open("__", "_blank")}
-          >
-            React + TS
-          </button>
-        </div>
-        {/*Prosjekt 3 */}
-        <div className={titleProject}>
-          Ravioli
-          <button
-            type="button"
-            className={buttonInText}
-            onClick={() => window.open("__", "_blank")}
-          >
-            React + TS
-          </button>
-        </div>
-        {/*Prosjekt 4 */}
-        <div className={`${titleProject} border-b-1`}>
-          Movie Library
-          <button
-            type="button"
-            className={buttonInText}
-            onClick={() => window.open("__", "_blank")}
-          >
-            Java
-          </button>
-        </div>
+            <span className="flex-1">{project.name}</span>
+            <span className={`mr-9 ${inText}`}>{project.skills}</span>
+            <button className="flex justify-end h-1/2">
+              <img
+                src="github.svg"
+                alt="github"
+                onClick={() => window.open(project.link, "_blank")}
+              />
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );
