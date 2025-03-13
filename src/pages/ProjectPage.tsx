@@ -37,23 +37,35 @@ export const ProjectPage = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen items-center">
-      <h1 className="font-inria text-headerborder text-3xl sm:text-4xl mt-10 mb-5">
+    <div className="flex flex-col lg:flex-row h-full items-center lg:px-20 lg:gap-x-14 lg:h-[calc(100vh-4.5rem)]">
+      {/* Title for mobile */}
+      <h1 className="lg:hidden font-inria text-headerborder text-3xl sm:text-4xl mt-10 mb-5">
         Projects
       </h1>
       {/*Boks for bilde */}
-      <div className="border-4 text-headerborder bg-button/50 rounded-3xl m-4 p-2 h-40 w-80 flex items-center justify-center overflow:hidden">
-        {projectPicture ? (
-          <img
-            src={projectPicture}
-            alt="Project"
-            className="w-full h-full object-contain rounded-xl"
-          />
-        ) : (
-          <p></p>
-        )}
+      <div className="flex lg:flex-col items-end justify-center overflow:hidden lg:order-2">
+        <img
+          src="totoro.gif"
+          alt=""
+          className="hidden lg:block w-24 h-24 ml-4"
+        />
+        <div className="border-4 text-headerborder bg-button/50 rounded-3xl mb-4 p-2 h-[30vh] w-[80vw] sm:h-[40vh] sm:w-[60vw] lg:h-[50vh] lg:w-[40vw]">
+          {projectPicture ? (
+            <img
+              src={projectPicture}
+              alt="Project"
+              className="w-full h-full object-contain rounded-xl"
+            />
+          ) : (
+            <p></p>
+          )}
+        </div>
       </div>
-      <div className="flex-col w-4/5 overflow-hidden font-inria text-text-dark text-xl sm:text-3xl border-b-1 border-headerborder">
+      <div className="flex-col w-4/5 overflow-hidden font-inria text-text-dark text-xl sm:text-3xl border-b-1 border-headerborder lg:order-1">
+        {/* Title for pc version */}
+        <h1 className="hidden lg:block font-inria text-headerborder lg:text-6xl mb-5 text-center">
+          Projects
+        </h1>
         <motion.img
           className="size-1/12"
           src="chicken.gif"

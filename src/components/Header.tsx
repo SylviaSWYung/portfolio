@@ -17,11 +17,11 @@ export const Header = () => {
     <div className="h-15 bg-header border-b-1 border-headerborder flex items-center justify-between sm:justify-around">
       <Link
         to="/"
-        className="ml-6 sm:ml-0 font-inria text-text-dark text-lg sm:text-2xl"
+        className="ml-6 sm:ml-0 font-inria text-text-dark text-lg md:text-2xl"
       >
         Sylvia Suet Wai Yung
       </Link>
-      <div className="hidden sm:flex font-inria xl:mr-50 text-2xl text-text-dark gap-16 hover:text-gray-900">
+      <div className="hidden sm:flex font-inria xl:mr-50 text-lg md:text-2xl text-text-dark gap-16 hover:text-gray-900">
         <Link to="/about">ABOUT ME</Link>
         <Link to="/projects">PROJECT</Link>
         <Link to="/skills">SKILLS</Link>
