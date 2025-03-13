@@ -78,10 +78,11 @@ export const ProjectPage = () => {
           >
             <span className="flex-1">{project.name}</span>
             <span className={`mr-9 ${inText}`}>{project.skills}</span>
-            <button className="flex justify-end h-1/2">
+            <button className="flex justify-end h-8 w-8 sm:h-10 sm:w-10">
               <img
                 src="github.svg"
                 alt="github"
+                className="w-full h-full object-contain"
                 onClick={() => window.open(project.link, "_blank")}
               />
             </button>
