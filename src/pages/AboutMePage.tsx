@@ -1,7 +1,7 @@
 // A page about me
 export const AboutMePage = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center w-7/8 mx-auto mt-4 sm:mt-6 lg:gap-x-30 justify-center">
+    <div className="flex flex-col lg:flex-row items-center w-7/8 mx-auto mt-4 sm:mt-10 lg:gap-x-10 xl:gap-x-30 justify-center">
       {/* picture mobile version */}
       <img
         src="aboutme/aboutmemobile.png"
@@ -12,10 +12,10 @@ export const AboutMePage = () => {
       <img
         src="aboutme/aboutmedesktop.png"
         alt=""
-        className="relative hidden lg:block h-1/3 w-1/3"
+        className="relative hidden lg:block lg:h-1/2 lg:w-1/2 xl:h-1/3 xl:w-1/3"
       />
       {/* about me text */}
-      <p className="font-inria text-center text-md md:text-2xl lg:text-3xl lg:w-4/5">
+      <p className="font-inria text-center text-md md:text-2xl xl:text-3xl lg:w-4/5">
         With a background in Cell & Molecular Biology from NTNU, I took a bold
         step toward my true passion—technology. Instead of pursuing a master's
         in biology, I switched to Computer Science and never looked back! <br />
