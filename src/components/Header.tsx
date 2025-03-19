@@ -21,7 +21,7 @@ export const Header = () => {
       >
         Sylvia Suet Wai Yung
       </Link>
-      <div className="hidden sm:flex font-inria xl:mr-50 text-lg md:text-2xl text-text-dark gap-16 hover:text-gray-900">
+      <div className="hidden sm:flex font-inria text-lg md:text-2xl text-text-dark gap-16 hover:text-gray-900">
         <Link to="/about">ABOUT ME</Link>
         <Link to="/projects">PROJECT</Link>
         <Link to="/skills">SKILLS</Link>
