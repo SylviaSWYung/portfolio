@@ -11,7 +11,7 @@ export const HomePage = () => {
       <div className="relative flex justify-center sm:order-2">
         {/*På høyre side av bildet*/}
         <motion.img
-          className="absolute sm:hidden xl:block left-9/12 top-3/4 sm:left-11/12 -rotate-10 sm:rotate-10 max-w-16 sm:max-w-1/4 sm:top-3/4"
+          className="absolute sm:hidden xl:block left-9/12 top-3/4 sm:left-11/12 -rotate-10 sm:rotate-10 max-w-16 sm:max-w-1/5 sm:top-3/4"
           src="bow.png"
           alt=""
           animate={{ y: [0, -10, 0] }}
