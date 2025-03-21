@@ -22,7 +22,7 @@ export const HomePage = () => {
           }}
         />
         <img
-          className="rounded-full mx-auto my-12 w-full max-w-[200px] sm:max-w-[350px] lg:max-w-[400px]"
+          className="rounded-full mx-auto my-12 w-full max-w-[200px] sm:max-w-[350px] lg:max-w-[350px]"
           src="/Sylvia.jpg"
           alt="Picture of Sylvia"
         />
@@ -88,7 +88,7 @@ export const HomePage = () => {
       />
       {/*Hidden i mobil versjon, men venstre side av bildet */}
       <motion.img
-        className="hidden sm:absolute sm:hidden lg:block sm:right-1/3 sm:top-1/6 sm:-rotate-10 sm:scale-40"
+        className="hidden sm:absolute sm:hidden lg:block sm:right-1/3 sm:top-1/6 sm:max-w-1/4 sm:-rotate-10 sm:scale-40"
         src="bow.png"
         alt=""
         animate={{ y: [0, -10, 0] }}

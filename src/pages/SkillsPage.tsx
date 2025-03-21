@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 
 const titleForBox = "font-inria text-2xl lg:text-3xl text-headerborder mb-2";
 const textInBox =
-  "font-inria text-text-dark text-md sm:text-xl lg:text-2xl xl:text-3xl";
+  "font-inria text-text-dark text-md sm:text-xl lg:text-2xl xl:text-2xl";
 const box =
-  "flex p-4 sm:p-8 lg:p-15 lg:h-full border-2 border-headerborder rounded-5xl text-center items-center justify-center w-full";
+  "flex p-4 sm:p-8 lg:px-15 lg:h-full border-2 border-headerborder rounded-5xl text-center items-center justify-center w-full";
 
 export const SkillsPage = () => {
   return (
-    <div className="w-7/8 lg:w-full mx-auto my-4 sm:my-15">
+    <div className="w-7/8 lg:w-full mx-auto my-4 sm:my-6">
       <div className="flex flex-row items-center justify-center">
         <motion.img
           className="relative hidden xl:block rotate-10 w-1/12 "
@@ -21,7 +21,7 @@ export const SkillsPage = () => {
             ease: "easeInOut",
           }}
         />
-        <h1 className="font-inria text-center text-3xl sm:text-5xl lg:text-7xl text-headerborder border-b-1 w-7/8 lg:w-1/3 ">
+        <h1 className="font-inria text-center text-3xl sm:text-5xl lg:text-6xl text-headerborder border-b-1 w-7/8 lg:w-1/3 ">
           Skills
         </h1>
         <motion.img
