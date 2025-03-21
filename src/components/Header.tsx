@@ -43,21 +43,24 @@ export const Header = () => {
       {/* Mobile Dropdown menu */}
       {isExpanded && (
         <div className="flex items-center z-10 absolute w-full text-base top-15 justify-evenly bg-header sm:hidden p-8 font-inria ">
-          <a href="/about" className="block text-text-dark hover:text-gray-900">
+          <Link
+            to="/about"
+            className="block text-text-dark hover:text-gray-900"
+          >
             ABOUT ME
-          </a>
-          <a
-            href="/projects"
+          </Link>
+          <Link
+            to="/projects"
             className="block text-text-dark hover:text-gray-900"
           >
             PROJECT
-          </a>
-          <a
-            href="/skills"
+          </Link>
+          <Link
+            to="/skills"
             className="block text-text-dark hover:text-gray-900"
           >
             SKILLS
-          </a>
+          </Link>
         </div>
       )}
     </div>
