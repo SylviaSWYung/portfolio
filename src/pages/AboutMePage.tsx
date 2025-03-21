@@ -1,7 +1,7 @@
 // A page about me
 export const AboutMePage = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center w-7/8 mx-auto mt-4 sm:mt-5 lg:gap-x-10 xl:gap-x-30 justify-center">
+    <div className="flex flex-col lg:flex-row items-center w-7/8 mx-auto lg:gap-x-10 xl:gap-x-30 justify-center">
       {/* picture mobile version */}
       <img
         src="aboutme/aboutmemobile.png"
