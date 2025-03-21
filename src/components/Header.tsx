@@ -13,6 +13,10 @@ export const Header = () => {
     setIsExpanded(!isExpanded);
   };
 
+  const closeMenu = () => {
+    setIsExpanded(false);
+  };
+
   return (
     <div className="h-15 bg-header border-b-1 border-headerborder flex items-center justify-between sm:justify-around">
       <Link
@@ -46,18 +50,21 @@ export const Header = () => {
           <Link
             to="/about"
             className="block text-text-dark hover:text-gray-900"
+            onClick={closeMenu}
           >
             ABOUT ME
           </Link>
           <Link
             to="/projects"
             className="block text-text-dark hover:text-gray-900"
+            onClick={closeMenu}
           >
             PROJECT
           </Link>
           <Link
             to="/skills"
             className="block text-text-dark hover:text-gray-900"
+            onClick={closeMenu}
           >
             SKILLS
           </Link>
