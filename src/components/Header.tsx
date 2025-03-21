@@ -53,7 +53,7 @@ export const Header = () => {
             PROJECT
           </a>
           <a
-            href="/contact"
+            href="/skills"
             className="block text-text-dark hover:text-gray-900"
           >
             SKILLS
