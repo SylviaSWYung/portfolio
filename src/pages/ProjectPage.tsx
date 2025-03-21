@@ -49,7 +49,7 @@ export const ProjectPage = () => {
           alt=""
           className="hidden lg:block w-24 h-24 ml-4"
         />
-        <div className="border-4 text-headerborder bg-button/50 rounded-3xl mb-4 p-2 h-[30vh] w-[80vw] sm:h-[40vh] sm:w-[60vw] lg:h-[50vh] lg:w-[40vw]">
+        <div className="flex items-center justify-center border-4 text-headerborder bg-button/50 rounded-3xl mb-4 p-2 h-[30vh] w-[80vw] sm:h-[40vh] sm:w-[60vw] lg:h-[50vh] lg:w-[40vw]">
           {projectPicture ? (
             <img
               src={projectPicture}
@@ -57,7 +57,14 @@ export const ProjectPage = () => {
               className="w-full h-full object-contain rounded-xl"
             />
           ) : (
-            <p></p>
+            <div>
+              <p className="hidden lg:block text-2xl text-center">
+                Explore projects by hovering over them!
+              </p>
+              <p className="lg:hidden text-center text-lg font-inria">
+                Click on a project to view more details!
+              </p>
+            </div>
           )}
         </div>
       </div>
