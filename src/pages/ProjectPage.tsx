@@ -19,7 +19,7 @@ export const ProjectPage = () => {
     {
       name: "NotaFlow",
       image: "project/notaflow.png",
-      link: "--",
+      link: "https://github.com/SylviaSWYung/NotaFlow",
       skills: "React + TS",
     },
     {
