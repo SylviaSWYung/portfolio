@@ -4,7 +4,7 @@ const titleForBox = "font-inria text-2xl lg:text-3xl text-headerborder mb-2";
 const textInBox =
   "font-inria text-text-dark text-md sm:text-xl lg:text-2xl xl:text-2xl";
 const box =
-  "flex p-4 sm:p-8 lg:px-15 lg:h-full border-2 border-headerborder rounded-5xl text-center items-center justify-center w-full";
+  "flex p-4 sm:p-8 lg:px-15 lg:h-full border-2 border-headerborder rounded-5xl text-center items-center justify-around lg:justify-center w-full";
 
 export const SkillsPage = () => {
   return (
@@ -43,6 +43,7 @@ export const SkillsPage = () => {
           <h2 className={titleForBox}>Code & Syntax</h2>
           <div className={`${box} ${textInBox} lg:flex-col`}>
             <p>
+              Kotlin <br />
               Java <br />
               Python <br />
               JavaScript <br />
@@ -62,26 +63,32 @@ export const SkillsPage = () => {
               React <br />
               TailwindCSS <br />
               MUI Components <br />
+              Motion Framework <br />
               Vite <br />
             </p>
             <p>
               JavaFX <br />
-              Motion Framework <br />
-              Maven <br />
               Spring Boot <br />
               SQLite3 <br />
+              Kafka <br />
             </p>
           </div>
         </div>
         {/* Development Tools */}
         <div className="flex flex-col items-center mt-4 mb-4 lg:mb-0">
           <h2 className={titleForBox}>Development Tools</h2>
-          <div className={`${box} ${textInBox}`}>
+          <div className={`${box} ${textInBox} lg:flex-col`}>
             <p>
               Git <br />
               GitHub <br />
-              Figma <br />
               VS Code <br />
+              IntelliJ <br />
+            </p>
+            <p>
+              Figma <br />
+              Splunk <br />
+              Maven <br />
+              Podman <br />
             </p>
           </div>
         </div>
