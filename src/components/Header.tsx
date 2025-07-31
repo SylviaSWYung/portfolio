@@ -21,26 +21,26 @@ export const Header = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 h-15 w-full z-50 bg-white/70 backdrop-blur-sm flex flex-row items-center justify-between sm:justify-around">
-      <Link
-        to="/"
+    <div className="fixed top-0 left-0 h-20 w-full z-50 bg-FCFCFC/70 backdrop-blur-sm flex flex-row items-center justify-between sm:justify-around">
+      <a
+        href="#homepage"
         className="ml-6 sm:ml-0 font-inria font-bold text-text-dark text-lg md:text-2xl hover:text-cerise"
       >
         Sylvia Yung
-      </Link>
+      </a>
       <div className="hidden sm:flex font-inria text-lg md:text-xl text-black gap-16">
-        <Link to="/about" className={hover_color}>
+        <a href="#about" className={hover_color}>
           About me
-        </Link>
-        <Link to="/projects" className={hover_color}>
+        </a>
+        <a href="#projects" className={hover_color}>
           Project
-        </Link>
-        <Link to="/skills" className={hover_color}>
+        </a>
+        <a href="#skills" className={hover_color}>
           Skills
-        </Link>
-        <Link to="/work" className={hover_color}>
+        </a>
+        <a href="#work" className={hover_color}>
           Work
-        </Link>
+        </a>
       </div>
       <button
         type="button"

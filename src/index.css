@@ -3,7 +3,11 @@
 @import "tailwindcss";
 
 body {
-  background-color: white;
+  background-color: #fcfcfc;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @theme {
