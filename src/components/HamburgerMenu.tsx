@@ -1,13 +1,34 @@
 export default function HamburgerMenu() {
   return (
-    <svg className="h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
-      <path
-        stroke="#b66878"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M1 1h15M1 7h15M1 13h15"
-      />
+    <svg
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#D35269"
+      stroke="#D35269"
+      aria-hidden="true"
+      className="h-7"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <title>70 Basic icons by Xicons.co</title>
+        <path
+          d="M41,14H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,14Z"
+          fill="#D35269"
+        ></path>
+        <path
+          d="M41,26H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,26Z"
+          fill="#D35269"
+        ></path>
+        <path
+          d="M41,38H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,38Z"
+          fill="#D35269"
+        ></path>
+      </g>
     </svg>
   );
 }
