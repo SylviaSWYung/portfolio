@@ -8,7 +8,7 @@ export const App = () => {
   return (
     <>
       <Header />
-      <main className="pt-20 scroll-smooth">
+      <main className="pt-20 scroll-smooth lg:px-40">
         <HomePage />
         <AboutMePage />
         <ProjectPage />

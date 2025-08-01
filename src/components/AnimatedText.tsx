@@ -54,8 +54,8 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
     pauseBetweenTexts,
   ]);
   return (
-    <div className="flex text-2xl sm:text-3xl text-headerborder xl:text-4xl">
-      <p className="text-text-light w-16 sm:w-20 xl:w-24">I'm a</p>
+    <div className="flex text-2xl sm:text-3xl text-royalblue xl:text-4xl">
+      <p className="text-black w-16 sm:w-20 xl:w-24">I'm a</p>
       <span className="flex-3">
         {displayText}
         <span className="inline-block w-[1ch] animate-blink">|</span>
