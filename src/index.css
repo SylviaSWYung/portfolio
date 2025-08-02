@@ -21,6 +21,7 @@ html {
   --color-text-light: #bd9a9a;
   --color-hover: #8b8b8b;
   --color-royalblue: #274ca2;
+  --color-background: #fcfcfc;
   --breakpoint-half: 77.9rem;
   --radius-5xl: 3rem;
 }

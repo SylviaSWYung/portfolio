@@ -21,7 +21,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 h-20 w-full z-50 bg-FCFCFC/70 backdrop-blur-sm flex flex-row items-center justify-between sm:justify-around">
+    <div className="fixed top-0 left-0 h-20 w-full z-50 bg-background/90 flex flex-row items-center justify-between sm:justify-around">
       <a
         href="#homepage"
         className="ml-6 sm:ml-0 font-inria font-bold text-text-dark text-lg md:text-2xl hover:text-cerise"
@@ -45,7 +45,7 @@ export const Header = () => {
       <button
         type="button"
         onClick={resume}
-        className="font-inria text-base sm:text-lg xl:text-lg text-text-dark font-bold rounded-full h-8 w-20 sm:w-22 xl:h-10 xl:w-28 bg-cerise/80 shadow-lg ml-6 hover:bg-cerise/50"
+        className="font-inria text-base sm:text-lg xl:text-lg text-text-dark font-bold rounded-full h-8 w-20 sm:w-22 xl:h-10 xl:w-28 bg-cerise/80 shadow-lg ml-35 sm:ml-6 hover:bg-cerise/50"
       >
         Resume
       </button>
@@ -58,7 +58,7 @@ export const Header = () => {
       </button>
       {/* Mobile Dropdown menu */}
       {isExpanded && (
-        <div className="flex items-center z-50 fixed w-full text-base top-15 justify-evenly bg-white/80 sm:hidden p-8 font-inria ">
+        <div className="flex items-center z-50 fixed w-full text-base top-20 justify-evenly bg-background/90 sm:hidden p-8 font-inria">
           <Link to="/about" className={mobile_text} onClick={closeMenu}>
             About me
           </Link>
