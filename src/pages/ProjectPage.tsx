@@ -46,7 +46,7 @@ export const ProjectPage = () => {
         {/*Boks for bilde */}
         <div className="flex lg:flex-col items-end justify-center overflow:hidden lg:order-2">
           <img
-            src="totoro.gif"
+            src="div/totoro.gif"
             alt=""
             className="hidden lg:block w-24 h-24 ml-4"
           />
@@ -76,7 +76,7 @@ export const ProjectPage = () => {
           </h1>
           <motion.img
             className="size-1/12"
-            src="chicken.gif"
+            src="div/chicken.gif"
             alt=""
             animate={{
               x: [0, 350, 350, 0],

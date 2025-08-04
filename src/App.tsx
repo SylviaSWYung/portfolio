@@ -10,7 +10,7 @@ export const App = () => {
       <Header />
       <main className="pt-20 scroll-smooth lg:px-40">
         <HomePage />
-        <img src="waveStar.png" alt="" className="sm:mb-10" />
+        <img src="div/waveStar.png" alt="" className="sm:mb-10" />
         <AboutMePage />
         <ProjectPage />
         <SkillsPage />

@@ -13,7 +13,7 @@ export const SkillsPage = () => {
         <div className="flex flex-row items-center justify-center">
           <motion.img
             className="relative hidden xl:block rotate-10 w-1/12 "
-            src="bow.png"
+            src="div/bow.png"
             alt=""
             animate={{ y: [0, -10, 0] }}
             transition={{
@@ -27,7 +27,7 @@ export const SkillsPage = () => {
           </h1>
           <motion.img
             className="relative hidden xl:block -rotate-10 w-1/12"
-            src="bow.png"
+            src="div/bow.png"
             alt=""
             animate={{ y: [0, -10, 0] }}
             transition={{

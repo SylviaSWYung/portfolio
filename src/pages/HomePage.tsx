@@ -13,7 +13,7 @@ export const HomePage = () => {
         <div className="relative flex justify-center sm:order-1 md:order-2">
           <img
             className="rounded-full mx-auto my-12 max-w-1/2 sm:max-w-sm"
-            src="/Sylvia2.jpg"
+            src="homepage/Sylvia2.jpg"
             alt="Picture of Sylvia"
           />
         </div>
