@@ -37,7 +37,7 @@ export const ProjectPage = () => {
   ];
 
   return (
-    <section id="projects" className="min-h-screen">
+    <section id="projects" className="min-h-screen p-10">
       <div className="flex flex-col lg:justify-around sm:w-full w-6/7 mx-auto lg:flex-row h-full items-center lg:px-20 lg:gap-x-14 lg:h-[calc(100vh-4.5rem)]">
         {/* Title for mobile */}
         <h1 className="lg:hidden font-inria font-bold text-cerise text-4xl mt-10 mb-5">

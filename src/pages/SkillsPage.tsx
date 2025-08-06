@@ -72,6 +72,7 @@ export const SkillsPage = () => {
                 Spring Boot <br />
                 SQLite3 <br />
                 Kafka <br />
+                Firebase <br />
               </p>
             </div>
           </div>
@@ -84,6 +85,7 @@ export const SkillsPage = () => {
                 GitHub <br />
                 VS Code <br />
                 IntelliJ <br />
+                Jenkins <br />
               </p>
               <p>
                 Figma <br />
