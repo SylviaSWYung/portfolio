@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export const AboutMePage = () => {
   return (
-    <section id="about" className="min-h-screen py-24">
+    <section id="about" className="min-h-screen py-22">
       <div className="flex flex-col lg:flex-row items-center mx-auto lg:gap-x-10 xl:gap-x-30 justify-center w-6/7 sm:w-full">
         <div className="flex flex-col">
           <p className="font-inria font-bold text-cerise text-4xl mb-5">
@@ -31,7 +31,7 @@ export const AboutMePage = () => {
           alt=""
           className="h-7/8 w-7/8 md:h-3/5 md:w-3/5 mr-2 lg:hidden"
         />
-        <p className="z-10 font-inria text-center text-sm md:text-2xl xl:text-lg lg:w-2/6">
+        <p className="z-10 font-inria text-center text-sm md:text-2xl xl:text-lg lg:w-2/6 w-4/5">
           With a background in Cell & Molecular Biology from NTNU, I took a bold
           step toward my true passion—technology. Instead of pursuing a master's
           in biology, I switched to Computer Science and never looked back!

@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const inText =
-  "text-base sm:text-2xl xl:text-3xl text-text-dark border-b-1 border-dashed";
+  "text-base sm:text-lg xl:text-xl text-black border-b-2 border-cerise border-dashed";
 const titleProject =
-  "border-t-1 border-headerborder flex items-center h-16 justify-between w-full";
+  "border-t-1 border-cerise text-black flex items-center h-20 justify-between w-full cursor-pointer hover:text-cerise ";
 
 export const ProjectPage = () => {
   const [projectPicture, setProjectPicture] = useState<string | null>(null);
@@ -37,10 +37,10 @@ export const ProjectPage = () => {
   ];
 
   return (
-    <section id="projects" className="min-h-screen py-20">
-      <div className="flex flex-col lg:justify-around lg:flex-row h-full items-center lg:px-20 lg:gap-x-14 lg:h-[calc(100vh-4.5rem)]">
+    <section id="projects" className="min-h-screen">
+      <div className="flex flex-col lg:justify-around sm:w-full w-6/7 mx-auto lg:flex-row h-full items-center lg:px-20 lg:gap-x-14 lg:h-[calc(100vh-4.5rem)]">
         {/* Title for mobile */}
-        <h1 className="lg:hidden font-inria text-headerborder text-3xl sm:text-4xl mt-10 mb-5">
+        <h1 className="lg:hidden font-inria font-bold text-cerise text-4xl mt-10 mb-5">
           Projects
         </h1>
         {/*Boks for bilde */}
@@ -50,7 +50,7 @@ export const ProjectPage = () => {
             alt=""
             className="hidden lg:block w-24 h-24 ml-4"
           />
-          <div className="flex items-center justify-center border-4 text-headerborder bg-button/50 rounded-3xl mb-4 p-2 h-[30vh] w-[80vw] sm:h-[40vh] sm:w-[60vw] lg:h-[50vh] lg:w-[40vw]">
+          <div className="flex items-center justify-center border-4 text-royalblue border-cerise bg-cerise/10 rounded-3xl mb-4 p-2 w-full max-w-[500px] h-64 lg:h-80 overflow-hidden aspect-video">
             {projectPicture ? (
               <img
                 src={projectPicture}
@@ -62,16 +62,16 @@ export const ProjectPage = () => {
                 <p className="hidden lg:block text-2xl text-center">
                   Explore projects by hovering over them!
                 </p>
-                <p className="lg:hidden text-center text-lg font-inria">
+                <p className="lg:hidden font-inria text-center text-lg">
                   Click on a project to view more details!
                 </p>
               </div>
             )}
           </div>
         </div>
-        <div className="flex-col w-4/5 lg:w-2/5 overflow-hidden font-inria text-text-dark text-xl sm:text-3xl border-b-1 border-headerborder lg:order-1">
+        <div className="flex-col w-4/5 lg:w-2/5 overflow-hidden font-inria text-xl sm:text-2xl border-b-1 border-cerise lg:order-1">
           {/* Title for pc version */}
-          <h1 className="hidden lg:block font-inria text-headerborder lg:text-7xl mb-5 text-center">
+          <h1 className="hidden lg:block font-inria text-cerise lg:text-4xl font-bold mb-10">
             Projects
           </h1>
           <motion.img
@@ -105,7 +105,7 @@ export const ProjectPage = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  className="w-full h-full fill-curent cursor-pointer fill-headerborder hover:fill-text-light"
+                  className="w-full h-full fill-curent cursor-pointer fill-royalblue hover:fill-cerise"
                 >
                   <path
                     d="M12.2047 0.00001C6.56031 -0.005731 1.74628 4.08615 0.842541 9.6577C-0.061195 15.2293 3.2126 

@@ -65,15 +65,26 @@ export const HomePage = () => {
           </div>
         </div>
         {/*I mobil versjon - under buttons. */}
-        <MotionStar
-          className="sm:hidden left-10 rotate-12 w-1/3 mt-10"
-          animate={{ y: [0, -5, 0] }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
+        <div className="sm:hidden flex flex-row justify-around">
+          <MotionStar
+            className="rotate-12 mt-8 mr-2 size-1/6"
+            animate={{ y: [0, -5, 0] }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <MotionStar
+            className="rotate-45 mt-25"
+            animate={{ x: [0, -3, 0] }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </div>
         {/*Hidden i mobil versjon, men venstre side av bildet */}
         <MotionStar
           className="hidden sm:absolute sm:hidden lg:block lg:w-1/12 lg:h-1/12 lg:top-1/3"

@@ -8,9 +8,13 @@ export const App = () => {
   return (
     <>
       <Header />
-      <main className="pt-20 scroll-smooth lg:px-40">
+      <main className="pt-20 scroll-smooth lg:px-50 overflow-x-hidden">
         <HomePage />
-        <img src="div/waveStar.png" alt="" className="sm:mb-10" />
+        <img
+          src="div/waveStar.png"
+          alt=""
+          className="w-full max-w-full h-auto"
+        />
         <AboutMePage />
         <ProjectPage />
         <SkillsPage />
