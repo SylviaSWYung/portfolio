@@ -37,20 +37,20 @@ export const ProjectPage = () => {
   ];
 
   return (
-    <section id="projects" className="min-h-screen p-10">
-      <div className="flex flex-col lg:justify-around sm:w-full w-6/7 mx-auto lg:flex-row h-full items-center lg:px-20 lg:gap-x-14 lg:h-[calc(100vh-4.5rem)]">
+    <section id="projects" className="min-h-screen pt-10">
+      <div className="flex flex-col xl:justify-around lg:w-full w-6/7 mx-auto xl:flex-row h-full items-center lg:px-20 lg:gap-x-14 lg:h-[calc(100vh-4.5rem)]">
         {/* Title for mobile */}
-        <h1 className="lg:hidden font-inria font-bold text-cerise text-4xl mt-10 mb-5">
+        <h1 className="xl:hidden font-inria font-bold text-cerise text-4xl mt-10 mb-5">
           Projects
         </h1>
         {/*Boks for bilde */}
-        <div className="flex lg:flex-col items-end justify-center overflow:hidden lg:order-2">
+        <div className="flex lg:flex-col items-end justify-center overflow:hidden xl:order-2">
           <img
             src="div/totoro.gif"
             alt=""
             className="hidden lg:block w-24 h-24 ml-4"
           />
-          <div className="flex items-center justify-center border-4 text-royalblue border-cerise bg-cerise/10 rounded-3xl mb-4 p-2 w-full max-w-[500px] h-64 lg:h-80 overflow-hidden aspect-video">
+          <div className="flex items-center justify-center border-4 text-royalblue border-cerise bg-cerise/10 rounded-3xl mb-20 xl:mb-4 p-2 w-5/6 lg:w-full lg:max-w-[500px] h-64 lg:h-80 overflow-hidden aspect-video">
             {projectPicture ? (
               <img
                 src={projectPicture}
@@ -59,19 +59,19 @@ export const ProjectPage = () => {
               />
             ) : (
               <div>
-                <p className="hidden lg:block text-2xl text-center">
+                <p className="hidden xl:block text-2xl text-center">
                   Explore projects by hovering over them!
                 </p>
-                <p className="lg:hidden font-inria text-center text-lg">
+                <p className="xl:hidden font-inria text-center text-lg">
                   Click on a project to view more details!
                 </p>
               </div>
             )}
           </div>
         </div>
-        <div className="flex-col w-4/5 lg:w-2/5 overflow-hidden font-inria text-xl sm:text-2xl border-b-1 border-cerise lg:order-1">
+        <div className="flex-col w-full xl:w-2/5 overflow-hidden font-inria text-xl sm:text-2xl border-b-1 border-cerise xl:order-1">
           {/* Title for pc version */}
-          <h1 className="hidden lg:block font-inria text-cerise lg:text-4xl font-bold mb-10">
+          <h1 className="hidden xl:block font-inria text-cerise lg:text-4xl font-bold mb-10">
             Projects
           </h1>
           <motion.img
