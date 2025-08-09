@@ -47,7 +47,7 @@ export const Header = () => {
           Work
         </button>
         <button onClick={() => handleNav("projects")} className={hover_color}>
-          Project
+          Projects
         </button>
         <button onClick={() => handleNav("skills")} className={hover_color}>
           Skills
@@ -95,7 +95,7 @@ export const Header = () => {
             }}
             className={mobile_text}
           >
-            Project
+            Projects
           </button>
           <button
             onClick={() => {
