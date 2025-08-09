@@ -17,16 +17,16 @@ export const Star = React.forwardRef<
     xmlSpace="preserve"
     fill="#000000"
     stroke="#000000"
-    stroke-width="0.00512"
+    strokeWidth="0.00512"
     {...props}
   >
-    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       stroke="#CCCCCC"
-      stroke-width="6.144"
+      strokeWidth="6.144"
     ></g>
     <g id="SVGRepo_iconCarrier">
       <style type="text/css"></style>
