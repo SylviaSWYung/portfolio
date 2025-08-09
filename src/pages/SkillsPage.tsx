@@ -6,9 +6,9 @@ const box =
 
 export const SkillsPage = () => {
   return (
-    <section id="skills" className="min-h-screen py-20">
+    <section id="skills" className="min-h-screen pt-10 xl:py-20">
       <div className="w-7/8 lg:w-full mx-auto my-4 sm:my-6">
-        <h1 className="font-inria text-4xl text-cerise font-bold mb-10 text-center">
+        <h1 className="font-inria text-2xl sm:text-4xl text-cerise font-bold mb-5 sm:mb-10 text-center">
           Skills
         </h1>
         {/* Skillboxs */}

@@ -7,7 +7,7 @@ export const AboutMePage = () => {
     <section id="about" className="min-h-screen pt-22">
       <div className="flex flex-col xl:flex-row items-center mx-auto lg:gap-x-10 xl:gap-x-30 justify-center w-6/7 sm:w-full">
         <div className="flex flex-col">
-          <p className="font-inria font-bold text-cerise text-4xl mb-5">
+          <p className="font-inria font-bold text-cerise text-2xl sm:text-4xl mb-5">
             About me
           </p>
           {/* picture desktop version */}

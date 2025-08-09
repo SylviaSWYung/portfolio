@@ -76,7 +76,7 @@ export const HomePage = () => {
             }}
           />
           <MotionStar
-            className="rotate-45 mt-25"
+            className="rotate-45 mt-25 size-1/12"
             animate={{ x: [0, -3, 0] }}
             transition={{
               duration: 3,

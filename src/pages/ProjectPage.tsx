@@ -4,7 +4,7 @@ import { useState } from "react";
 const inText =
   "text-base sm:text-lg xl:text-xl text-black border-b-2 border-cerise border-dashed";
 const titleProject =
-  "border-t-1 border-cerise text-black flex items-center h-20 justify-between w-full cursor-pointer hover:text-cerise ";
+  "border-t-1 border-cerise text-black flex items-center h-15 sm:h-20 justify-between w-full cursor-pointer hover:text-cerise ";
 
 export const ProjectPage = () => {
   const [projectPicture, setProjectPicture] = useState<string | null>(null);
@@ -40,7 +40,7 @@ export const ProjectPage = () => {
     <section id="projects" className="min-h-screen pt-10">
       <div className="flex flex-col xl:justify-around lg:w-full w-6/7 mx-auto xl:flex-row h-full items-center lg:px-20 lg:gap-x-14 lg:h-[calc(100vh-4.5rem)]">
         {/* Title for mobile */}
-        <h1 className="xl:hidden font-inria font-bold text-cerise text-4xl mt-10 mb-5">
+        <h1 className="xl:hidden font-inria font-bold text-cerise text-2xl sm:text-4xl mt-10 mb-5">
           Projects
         </h1>
         {/*Boks for bilde */}
@@ -50,7 +50,7 @@ export const ProjectPage = () => {
             alt=""
             className="hidden lg:block w-24 h-24 ml-4"
           />
-          <div className="flex items-center justify-center border-4 text-royalblue border-cerise bg-cerise/10 rounded-3xl mb-20 xl:mb-4 p-2 w-5/6 lg:w-full lg:max-w-[500px] h-64 lg:h-80 overflow-hidden aspect-video">
+          <div className="flex items-center justify-center border-4 text-royalblue border-cerise bg-cerise/10 rounded-3xl mb-5 xl:mb-4 p-2 w-5/6 lg:w-full lg:max-w-[500px] h-50 lg:h-80 overflow-hidden aspect-video">
             {projectPicture ? (
               <img
                 src={projectPicture}
@@ -69,7 +69,7 @@ export const ProjectPage = () => {
             )}
           </div>
         </div>
-        <div className="flex-col w-full xl:w-2/5 overflow-hidden font-inria text-xl sm:text-2xl border-b-1 border-cerise xl:order-1">
+        <div className="flex-col w-full xl:w-2/5 overflow-hidden font-inria text-base sm:text-2xl border-b-1 border-cerise xl:order-1">
           {/* Title for pc version */}
           <h1 className="hidden xl:block font-inria text-cerise lg:text-4xl font-bold mb-10">
             Projects
