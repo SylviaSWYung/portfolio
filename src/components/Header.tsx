@@ -1,12 +1,20 @@
 import { useState } from "react";
 import HamburgerMenu from "./HamburgerMenu";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function resume() {
   window.open("/Resume.pdf", "_blank");
 }
 
+const hover_color = "hover:text-cerise";
+const mobile_text = "block text-black hover:text-cerise";
+
 export const Header = () => {
+  const navigate = useNavigate();
+
+  const handleNav = (id: string) => {
+    navigate(`/${id}`);
+  };
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleMenu = () => {
@@ -18,24 +26,39 @@ export const Header = () => {
   };
 
   return (
-    <div className="h-15 bg-header border-b-1 border-headerborder flex items-center justify-between sm:justify-around">
-      <Link
-        to="/"
-        className="ml-6 sm:ml-0 font-inria text-text-dark text-lg md:text-2xl"
+    <div className="fixed top-0 left-0 h-20 w-full z-50 bg-background/90 flex flex-row items-center justify-between sm:justify-around">
+      <button
+        onClick={() => {
+          const home = document.getElementById("home");
+          if (home) {
+            home.scrollIntoView({ behavior: "smooth" });
+            window.history.pushState(null, "", "/");
+          }
+        }}
+        className="ml-6 sm:ml-0 font-inria font-bold text-text-dark text-lg md:text-2xl hover:text-cerise"
       >
-        Sylvia Suet Wai Yung
-      </Link>
-      <div className="hidden sm:flex font-inria text-lg md:text-2xl text-text-dark gap-16 hover:text-gray-900">
-        <Link to="/about">ABOUT ME</Link>
-        <Link to="/projects">PROJECT</Link>
-        <Link to="/skills">SKILLS</Link>
+        Sylvia Yung
+      </button>
+      <div className="hidden sm:flex font-inria text-lg md:text-xl text-black gap-16">
+        <button onClick={() => handleNav("about")} className={hover_color}>
+          About me
+        </button>
+        <button onClick={() => handleNav("work")} className={hover_color}>
+          Work
+        </button>
+        <button onClick={() => handleNav("projects")} className={hover_color}>
+          Project
+        </button>
+        <button onClick={() => handleNav("skills")} className={hover_color}>
+          Skills
+        </button>
       </div>
       <button
         type="button"
         onClick={resume}
-        className="font-inria text-base sm:text-lg xl:text-xl text-text-dark border-1 rounded-full h-8 w-20 sm:w-22 xl:h-10 xl:w-28 bg-button/50 shadow-lg ml-6 hover:bg-hover/50"
+        className="font-inria text-base sm:text-lg xl:text-lg text-text-dark font-bold rounded-full h-8 w-20 sm:w-22 xl:h-10 xl:w-28 bg-cerise/80 shadow-lg ml-25 sm:ml-6 hover:bg-cerise/50"
       >
-        RESUME
+        Resume
       </button>
       <button
         onClick={toggleMenu}
@@ -46,28 +69,43 @@ export const Header = () => {
       </button>
       {/* Mobile Dropdown menu */}
       {isExpanded && (
-        <div className="flex items-center z-10 absolute w-full text-base top-15 justify-evenly bg-header sm:hidden p-8 font-inria ">
-          <Link
-            to="/about"
-            className="block text-text-dark hover:text-gray-900"
-            onClick={closeMenu}
+        <div className="flex items-center z-50 fixed w-full text-base top-20 justify-evenly bg-background/90 sm:hidden p-8 font-inria">
+          <button
+            onClick={() => {
+              handleNav("about");
+              closeMenu();
+            }}
+            className={mobile_text}
           >
-            ABOUT ME
-          </Link>
-          <Link
-            to="/projects"
-            className="block text-text-dark hover:text-gray-900"
-            onClick={closeMenu}
+            About me
+          </button>
+          <button
+            onClick={() => {
+              handleNav("work");
+              closeMenu();
+            }}
+            className={mobile_text}
           >
-            PROJECT
-          </Link>
-          <Link
-            to="/skills"
-            className="block text-text-dark hover:text-gray-900"
-            onClick={closeMenu}
+            Work
+          </button>
+          <button
+            onClick={() => {
+              handleNav("projects");
+              closeMenu();
+            }}
+            className={mobile_text}
           >
-            SKILLS
-          </Link>
+            Project
+          </button>
+          <button
+            onClick={() => {
+              handleNav("skills");
+              closeMenu();
+            }}
+            className={mobile_text}
+          >
+            Skills
+          </button>
         </div>
       )}
     </div>

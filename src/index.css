@@ -3,7 +3,11 @@
 @import "tailwindcss";
 
 body {
-  background-color: #f9e7eb;
+  background-color: #fcfcfc;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @theme {
@@ -11,10 +15,13 @@ body {
   --font-inria: "Inria Serif", serif;
   --color-header: #daabb5;
   --color-headerborder: #b66878;
+  --color-cerise: #d35269;
   --color-button: #d9d9d9;
   --color-text-dark: #3b0d0d;
   --color-text-light: #bd9a9a;
   --color-hover: #8b8b8b;
+  --color-royalblue: #274ca2;
+  --color-background: #fcfcfc;
   --breakpoint-half: 77.9rem;
   --radius-5xl: 3rem;
 }
