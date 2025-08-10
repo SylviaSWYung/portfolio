@@ -6,6 +6,7 @@
 
 import { Tooltip } from "@mui/material";
 import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 type Skill = {
   src: string;
@@ -60,6 +61,20 @@ const skillCategories: Category[] = [
 ];
 
 export const SkillsPage = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [openTooltip, setOpenToolTip] = useState<string | null>(null);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const handleClick = (label: string) => {
+    setOpenToolTip((prev) => (prev === label ? null : label));
+  };
+
   return (
     <section id="skills" className="min-h-screen py-10 xl:py-20 text-center">
       <h1 className="font-inria text-2xl sm:text-4xl text-cerise font-bold mb-5 sm:mb-10">
@@ -76,13 +91,22 @@ export const SkillsPage = () => {
             </h2>
             <div className="grid grid-cols-2 gap-4 place-items-center">
               {category.skills.map((skill) => (
-                <Tooltip title={skill.label} key={skill.label} arrow>
+                <Tooltip
+                  title={skill.label}
+                  key={skill.label}
+                  arrow
+                  open={isMobile ? openTooltip === skill.label : false}
+                  disableHoverListener={isMobile}
+                  disableFocusListener={isMobile}
+                  disableTouchListener={isMobile}
+                >
                   <motion.img
                     src={skill.src}
                     alt={skill.label}
-                    whileHover={{ scale: 1.15 }}
+                    whileHover={!isMobile ? { scale: 1.15 } : {}}
                     transition={{ type: "spring", stiffness: 300 }}
                     className="w-15 h-15 rounded-full border-2 border-cerise bg-white object-contain cursor-pointer"
+                    onClick={() => isMobile && handleClick(skill.label)}
                   />
                 </Tooltip>
               ))}
