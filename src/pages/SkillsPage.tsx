@@ -61,19 +61,18 @@ const skillCategories: Category[] = [
 ];
 
 export const SkillsPage = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
   const [openTooltip, setOpenToolTip] = useState<string | null>(null);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    setIsMobile(window.innerWidth <= 768);
   }, []);
 
   const handleClick = (label: string) => {
     setOpenToolTip((prev) => (prev === label ? null : label));
   };
+
+  if (isMobile === null) return null;
 
   return (
     <section id="skills" className="min-h-screen py-10 xl:py-20 text-center">
@@ -95,10 +94,14 @@ export const SkillsPage = () => {
                   title={skill.label}
                   key={skill.label}
                   arrow
-                  open={isMobile ? openTooltip === skill.label : false}
-                  disableHoverListener={isMobile}
-                  disableFocusListener={isMobile}
-                  disableTouchListener={isMobile}
+                  {...(isMobile
+                    ? {
+                        open: openTooltip === skill.label,
+                        disableHoverListener: true,
+                        disableFocusListener: true,
+                        disableTouchListener: true,
+                      }
+                    : {})}
                 >
                   <motion.img
                     src={skill.src}
