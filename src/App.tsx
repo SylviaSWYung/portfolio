@@ -28,7 +28,7 @@ export const App = () => {
           <HomePage />
         </section>
         <img
-          src="div/waveStar.png"
+          src="div/waveStar2.png"
           alt=""
           className="w-full max-w-full h-auto"
         />
