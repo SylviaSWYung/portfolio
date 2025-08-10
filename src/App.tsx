@@ -23,7 +23,7 @@ export const App = () => {
   return (
     <>
       <Header />
-      <main className="pt-20 scroll-smooth lg:px-50 overflow-x-hidden">
+      <main className="pt-20 scroll-smooth overflow-x-hidden max-w-7xl mx-auto">
         <section id="home" className="scroll-mt-20">
           <HomePage />
         </section>
