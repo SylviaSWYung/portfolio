@@ -1,9 +1,3 @@
-// const titleForBox = "font-inria text-2xl lg:text-3xl text-cerise mb-2";
-// const textInBox =
-//   "font-inria text-text-dark text-md sm:text-xl lg:text-2xl xl:text-2xl";
-// const box =
-//   "flex p-4 sm:p-8 lg:px-15 lg:h-full border-2 border-cerise rounded-5xl text-center items-center justify-around lg:justify-center w-full";
-
 import { Tooltip } from "@mui/material";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
@@ -79,6 +73,10 @@ export const SkillsPage = () => {
       <h1 className="font-inria text-2xl sm:text-4xl text-cerise font-bold mb-5 sm:mb-10">
         Skills
       </h1>
+      <div className="font-inria text-lg m-5">
+        ✨ Not sure what that little icon means? Just hover or tap to reveal the
+        secret!
+      </div>
       <div className="flex gap-5 xl:gap-16 justify-center flex-wrap lg:w-full mx-auto">
         {skillCategories.map((category) => (
           <div
