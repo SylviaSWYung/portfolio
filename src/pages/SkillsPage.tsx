@@ -73,7 +73,7 @@ export const SkillsPage = () => {
       <h1 className="font-inria text-2xl sm:text-4xl text-cerise font-bold mb-5 sm:mb-10">
         Skills
       </h1>
-      <div className="font-inria text-lg m-5">
+      <div className="font-inria text-sm sm:text-lg m-5">
         ✨ Not sure what that little icon means? Just hover or tap to reveal the
         secret!
       </div>
