@@ -69,7 +69,7 @@ export const SkillsPage = () => {
   if (isMobile === null) return null;
 
   return (
-    <section id="skills" className="min-h-screen py-10 xl:py-20 text-center">
+    <section id="skills" className="pt-20 py-10 xl:py-20 text-center">
       <h1 className="font-inria text-2xl sm:text-4xl text-cerise font-bold mb-5 sm:mb-10">
         Skills
       </h1>

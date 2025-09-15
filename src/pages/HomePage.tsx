@@ -3,12 +3,12 @@ import { AnimatedText } from "../components/AnimatedText";
 import { Star } from "../components/Star";
 
 const buttonStyle =
-  "font-inria text-lg sm:text-2xl text-text-dark font-bold rounded-full h-10 w-26 sm:h-12 xl:h-14 sm:w-33 xl:w-38 bg-cerise/80 shadow-lg mx-2 hover:bg-cerise/50";
+  "font-inria text-lg sm:text-2xl text-text-dark rounded-full h-10 w-26 sm:h-12 xl:h-14 sm:w-33 xl:w-38 bg-cerise/80 shadow-lg mx-2 hover:bg-cerise/50";
 const MotionStar = motion.create(Star);
 
 export const HomePage = () => {
   return (
-    <section id="home" className="scroll-mt-20 min-h-screen">
+    <section id="home" className="scroll-mt-20 lg:min-h-screen">
       <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-evenly sm:items-center sm:gap-x-4 sm:max-w-full sm:min-h-[calc(100vh-10rem)]">
         <div className="relative flex justify-center sm:order-1 md:order-2">
           <img

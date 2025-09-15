@@ -6,6 +6,7 @@ import { AboutMePage } from "./pages/AboutMePage";
 import { WorkPage } from "./pages/WorkPage";
 import { ProjectPage } from "./pages/ProjectPage";
 import { SkillsPage } from "./pages/SkillsPage";
+import { Footer } from "./components/Footer";
 
 export const App = () => {
   const location = useLocation();
@@ -27,11 +28,11 @@ export const App = () => {
         <section id="home" className="scroll-mt-20">
           <HomePage />
         </section>
-        <img
+        {/* <img
           src="div/waveStar2.png"
           alt=""
           className="w-full max-w-full h-auto"
-        />
+        /> */}
         <section id="about" className="scroll-mt-5">
           <AboutMePage />
         </section>
@@ -45,6 +46,7 @@ export const App = () => {
           <SkillsPage />
         </section>
       </main>
+      <Footer />
     </>
   );
 };
