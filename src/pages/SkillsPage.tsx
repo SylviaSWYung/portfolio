@@ -1,4 +1,8 @@
-import { Tooltip } from "@mui/material";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
@@ -89,9 +93,7 @@ export const SkillsPage = () => {
             <div className="grid grid-cols-2 gap-4 place-items-center">
               {category.skills.map((skill) => (
                 <Tooltip
-                  title={skill.label}
                   key={skill.label}
-                  arrow
                   {...(isMobile
                     ? {
                         open: openTooltip === skill.label,
@@ -101,14 +103,22 @@ export const SkillsPage = () => {
                       }
                     : {})}
                 >
-                  <motion.img
-                    src={skill.src}
-                    alt={skill.label}
-                    whileHover={!isMobile ? { scale: 1.15 } : {}}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="w-15 h-15 rounded-full border-2 border-cerise bg-white object-contain cursor-pointer"
+                  {" "}
+                  <TooltipTrigger
+                    asChild
                     onClick={() => isMobile && handleClick(skill.label)}
-                  />
+                  >
+                    <motion.img
+                      src={skill.src}
+                      alt={skill.label}
+                      whileHover={!isMobile ? { scale: 1.15 } : {}}
+                      transition={{ type: "spring", stiffness: 300 }}
+                      className="w-15 h-15 rounded-full border-2 border-cerise bg-white object-contain cursor-pointer"
+                    />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{skill.label}</p>
+                  </TooltipContent>
                 </Tooltip>
               ))}
             </div>
