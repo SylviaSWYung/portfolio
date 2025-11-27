@@ -7,7 +7,7 @@
 @custom-variant dark (&:is(.dark *));
 
 body {
-  background-color: #fcfcfc;
+  background-color: #e8e8e6;
 }
 
 html {
@@ -26,6 +26,7 @@ html {
   --color-hover: #8b8b8b;
   --color-royalblue: #274ca2;
   --color-background: #fcfcfc;
+  --color-rose: #c57688;
   --breakpoint-half: 77.9rem;
   --radius-5xl: 3rem;
 }
