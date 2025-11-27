@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
-import { Header } from "./components/Header";
 import { AboutMePage } from "./pages/AboutMePage";
 import { WorkPage } from "./pages/WorkPage";
 import { ProjectPage } from "./pages/ProjectPage";
 import { SkillsPage } from "./pages/SkillsPage";
 import { Footer } from "./components/Footer";
+import { HeaderNew } from "./components/HeaderNew";
 
 export const App = () => {
   const location = useLocation();
@@ -23,16 +23,11 @@ export const App = () => {
 
   return (
     <>
-      <Header />
+      <HeaderNew />
       <main className="pt-20 scroll-smooth overflow-x-hidden max-w-7xl mx-auto">
         <section id="home" className="scroll-mt-20">
           <HomePage />
         </section>
-        {/* <img
-          src="div/waveStar2.png"
-          alt=""
-          className="w-full max-w-full h-auto"
-        /> */}
         <section id="about" className="scroll-mt-5">
           <AboutMePage />
         </section>
