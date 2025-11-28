@@ -44,13 +44,13 @@ export const Header = () => {
 
       {/* Dekstop version */}
       <div className="relative hidden md:flex top-0 items-center rounded-full bg-rose py-4 px-6 overflow-hidden">
-        <nav className="md:flex hidden justify-around items-center gap-10 text-white font-semibold text-xl">
+        <nav className="md:flex hidden justify-around items-center gap-10 text-white text-xl">
           {navigation.map((item) => (
             <Link
               to={item.href}
               key={item.title}
               className={
-                "hover:text-gray-200 relative transition-colors cursor-pointer z-10 " +
+                "hover:text-text-dark relative transition-colors cursor-pointer z-10 " +
                 (active === item.section ? "text-black" : "text-white")
               }
               ref={(el) => {
