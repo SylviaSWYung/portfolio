@@ -40,7 +40,7 @@ export const ProjectPage = () => {
     <section id="projects" className="pt-10 lg:pt-20">
       <div className="flex flex-col xl:justify-around lg:w-full w-6/7 mx-auto xl:flex-row h-full items-center lg:px-20 lg:gap-x-14 lg:h-full">
         {/* Title for mobile */}
-        <h1 className="xl:hidden font-inria font-bold text-cerise text-2xl sm:text-4xl mt-10 mb-5">
+        <h1 className="xl:hidden font-inria font-bold text-cerise text-2xl sm:text-4xl mb-5">
           Projects
         </h1>
         {/*Boks for bilde */}

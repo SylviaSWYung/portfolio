@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export const AboutMePage = () => {
   return (
-    <section id="about" className="pt-20">
+    <section id="about" className="pt-10 lg:pt-20 xl:pt-25">
       <div className="flex flex-col xl:flex-row items-center mx-auto lg:gap-x-10 xl:gap-x-30 justify-center w-6/7 sm:w-full">
         <div className="flex flex-col">
           <p className="font-inria font-bold text-cerise text-2xl sm:text-4xl mb-5">

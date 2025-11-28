@@ -24,20 +24,20 @@ export const App = () => {
   return (
     <>
       <Header />
-      <main className="pt-20 scroll-smooth overflow-x-hidden w-[min(1600px,92%)] mx-auto">
-        <section id="home" className="scroll-mt-20">
+      <main className="scroll-smooth overflow-x-hidden w-[min(1600px,92%)] mx-auto">
+        <section id="home">
           <HomePage />
         </section>
-        <section id="about" className="scroll-mt-5">
+        <section id="about">
           <AboutMePage />
         </section>
-        <section id="work" className="scroll-mt-5">
+        <section id="work">
           <WorkPage />
         </section>
-        <section id="projects" className="scroll-mt-5">
+        <section id="projects">
           <ProjectPage />
         </section>
-        <section id="skills" className="scroll-mt-5">
+        <section id="skills">
           <SkillsPage />
         </section>
       </main>

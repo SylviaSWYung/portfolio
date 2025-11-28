@@ -30,7 +30,7 @@ export const WorkPage = () => {
   ];
 
   return (
-    <section id="work" className="pt-20">
+    <section id="work" className="pt-10">
       <div className="flex flex-col flex-wrap mx-auto w-6/7">
         <p className="font-inria font-bold text-cerise text-2xl sm:text-4xl mb-5">
           Relevant Experience
