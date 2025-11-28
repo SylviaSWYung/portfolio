@@ -1,8 +1,9 @@
 import { HeaderNavItem } from "@/lib/types";
 import { SheetMenu } from "./SheetMenu";
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
+import { useHeaderPill } from "@/lib/hooks/useHeaderPill";
 
 const navigation: HeaderNavItem[] = [
   {
@@ -32,26 +33,9 @@ const navigation: HeaderNavItem[] = [
   },
 ];
 
-export const HeaderNew = () => {
-  const [active, setActive] = useState("Home");
+export const Header = () => {
+  const { active } = useHeaderPill(navigation);
   const itemRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
-
-  useEffect(() => {
-    const sections = navigation
-      .map((n) => document.getElementById(n.section))
-      .filter(Boolean);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        });
-      },
-      { threshold: 0.6 },
-    );
-    sections.forEach((sec) => observer.observe(sec!));
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <header className="sticky top-4 z-50 md:items-center flex flex-col m-3 gap-2 mx-auto w-[min(1600px,92%)]">
@@ -59,7 +43,7 @@ export const HeaderNew = () => {
       <SheetMenu navItems={navigation} className="md:hidden" />
 
       {/* Dekstop version */}
-      <div className="relative hidden md:flex top-0 items-center rounded-full bg-rose p-4 overflow-hidden">
+      <div className="relative hidden md:flex top-0 items-center rounded-full bg-rose py-4 px-6 overflow-hidden">
         <nav className="md:flex hidden justify-around items-center gap-10 text-white font-semibold text-xl">
           {navigation.map((item) => (
             <Link
@@ -83,8 +67,8 @@ export const HeaderNew = () => {
               transition={{ type: "tween", stiffness: 300, damping: 30 }}
               className="absolute bg-white rounded-full p-5"
               style={{
-                width: itemRefs.current[active]?.offsetWidth ?? 0,
-                left: itemRefs.current[active]?.offsetLeft ?? 0,
+                width: (itemRefs.current[active]?.offsetWidth ?? 0) + 20,
+                left: (itemRefs.current[active]?.offsetLeft ?? 0) + -10,
               }}
             />
           )}

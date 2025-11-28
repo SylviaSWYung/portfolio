@@ -6,7 +6,7 @@ import { WorkPage } from "./pages/WorkPage";
 import { ProjectPage } from "./pages/ProjectPage";
 import { SkillsPage } from "./pages/SkillsPage";
 import { Footer } from "./components/Footer";
-import { HeaderNew } from "./components/HeaderNew";
+import { Header } from "./components/Header";
 
 export const App = () => {
   const location = useLocation();
@@ -23,7 +23,7 @@ export const App = () => {
 
   return (
     <>
-      <HeaderNew />
+      <Header />
       <main className="pt-20 scroll-smooth overflow-x-hidden w-[min(1600px,92%)] mx-auto">
         <section id="home" className="scroll-mt-20">
           <HomePage />
