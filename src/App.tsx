@@ -7,6 +7,7 @@ import { ProjectPage } from "./pages/ProjectPage";
 import { SkillsPage } from "./pages/SkillsPage";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { FlowyText } from "./components/FlowyText";
 
 export const App = () => {
   const location = useLocation();
@@ -31,6 +32,7 @@ export const App = () => {
         <section id="about">
           <AboutMePage />
         </section>
+        <FlowyText />
         <section id="work">
           <WorkPage />
         </section>
