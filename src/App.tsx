@@ -24,7 +24,7 @@ export const App = () => {
   return (
     <>
       <Header />
-      <main className="scroll-smooth overflow-x-hidden w-[min(1600px,92%)] mx-auto">
+      <main className="scroll-smooth overflow-x-hidden w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-40 xl:px-50">
         <section id="home">
           <HomePage />
         </section>

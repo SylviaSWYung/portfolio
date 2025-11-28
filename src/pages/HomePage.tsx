@@ -6,7 +6,7 @@ export const HomePage = () => {
     <section id="home" className="pt-20 lg:pt-5">
       <div className="flex flex-col items-center">
         <img
-          className="mx-auto max-w-full lg:max-w-[900px] object-contain"
+          className="mx-auto lg:max-w-[900px] object-contain w-full"
           src="homepage/homepage.png"
           alt="homepage picture"
         />
