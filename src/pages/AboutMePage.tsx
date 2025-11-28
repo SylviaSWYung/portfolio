@@ -1,7 +1,7 @@
 export const AboutMePage = () => {
   return (
     <section id="about" className="pt-10 lg:pt-20 xl:pt-25">
-      <h2 className="font-semibold text-black italic text-3xl sm:text-4xl mb-5">
+      <h2 className="font-semibold text-black italic text-3xl sm:text-5xl mb-5">
         About me.
       </h2>
       <div className="flex flex-col sm:flex-row sm:gap-10">

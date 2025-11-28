@@ -33,7 +33,7 @@ export const App = () => {
           <AboutMePage />
         </section>
         <FlowyText />
-        <section id="work">
+        <section id="work" className="scroll-mt-20">
           <WorkPage />
         </section>
         <section id="projects">

@@ -66,8 +66,8 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
 export const FlowyText = () => {
   return (
-    <section className="space-y-5 my-10 md:my-20 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-      <ParallaxText baseVelocity={-1}>Full-Stack Developer</ParallaxText>
+    <section className="space-y-5 my-15 md:my-20 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+      <ParallaxText baseVelocity={-1}>Full Stack Developer</ParallaxText>
       <ParallaxText baseVelocity={1}>Cell & Molecular Biologist</ParallaxText>
     </section>
   );
