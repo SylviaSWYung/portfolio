@@ -38,13 +38,13 @@ export const Header = () => {
   const itemRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
 
   return (
-    <header className="sticky top-4 z-50 md:items-center flex flex-col m-3 gap-2 mx-auto w-[min(1600px,92%)]">
+    <header className="sticky top-4 z-50 sm:items-center flex flex-col m-3 gap-2 mx-auto w-[min(1600px,92%)]">
       {/* Sheet Menu for mobile */}
-      <SheetMenu navItems={navigation} className="md:hidden" />
+      <SheetMenu navItems={navigation} className="sm:hidden" />
 
       {/* Dekstop version */}
-      <div className="relative hidden md:flex top-0 items-center rounded-full bg-rose py-4 px-6 overflow-hidden">
-        <nav className="md:flex hidden justify-around items-center gap-10 text-white text-xl">
+      <div className="relative hidden sm:flex top-0 items-center rounded-full bg-rose py-4 px-6 overflow-hidden">
+        <nav className="sm:flex hidden justify-around items-center gap-10 text-white text-xl">
           {navigation.map((item) => (
             <Link
               to={item.href}
