@@ -5,7 +5,7 @@ export const AboutMePage = () => {
         About me.
       </h2>
       <div className="flex flex-col sm:flex-row sm:gap-10">
-        <p className="z-10 text-end justify-center items-center flex text-sm md:text-base xl:text-xl">
+        <p className="z-10 text-end justify-center items-center flex text-sm md:text-base">
           With a background in Cell & Molecular Biology from NTNU, I took a bold
           step toward my true passion—technology. Instead of pursuing a master's
           in biology, I switched to Computer Science and never looked back!
