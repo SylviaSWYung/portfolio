@@ -39,7 +39,7 @@ export const App = () => {
         <section id="projects" className="scroll-mt-10">
           <ProjectPage />
         </section>
-        <section id="skills">
+        <section id="skills" className="scroll-mt-6">
           <SkillsPage />
         </section>
       </main>
