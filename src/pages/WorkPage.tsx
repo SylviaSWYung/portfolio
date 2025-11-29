@@ -30,7 +30,7 @@ export const WorkPage = () => {
                     <span className="text-sm text-justify my-4 md:text-base">
                       {work.about}
                     </span>
-                    <span className="font-bold italic text-sm text-center">
+                    <span className="font-bold italic text-sm text-center md:text-base">
                       {work.skills}
                     </span>
                   </div>

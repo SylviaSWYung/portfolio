@@ -17,21 +17,21 @@ export const ProjectPage = () => {
         </h1>
 
         <div className="flex justify-center">
-          <div className="flex flex-col justify-evenly gap-y-5">
+          <div className="flex flex-col justify-evenly gap-y-5 md:gap-y-10">
             {visibleProjects.map((project, index) => (
               <div key={index}>
-                <div className="flex flex-col sm:flex-row">
+                <div className="flex flex-col md:flex-row justify-between sm:gap-4 lg:gap-8">
                   <img
                     src={project.image}
                     alt=""
-                    className="w-full border-2 border-gray-300 rounded-sm"
+                    className="w-full md:w-1/2 md:h-1/2 border-2 border-gray-300 rounded-sm self-center"
                   />
-                  <div className="flex flex-col text-center my-2">
+                  <div className="flex flex-col text-center my-2 md:w-xl">
                     <span className="font-bold text-rose text-center text-2xl">
                       {project.name}
                     </span>
                     <div className="flex gap-2 justify-between items-center my-2">
-                      <span className="text-sm italic font-semibold text-start">
+                      <span className="text-sm italic font-semibold text-start md:text-base">
                         {project.skills}
                       </span>
                       <button
@@ -41,7 +41,7 @@ export const ProjectPage = () => {
                         <img src="../public/div/github.svg" alt="github" />
                       </button>
                     </div>
-                    <span className="text-base text-end my-2">
+                    <span className="text-base text-end my-2 md:text-base">
                       {project.description}
                     </span>
                   </div>
