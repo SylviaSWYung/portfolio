@@ -36,7 +36,7 @@ export const App = () => {
         <section id="work" className="scroll-mt-20">
           <WorkPage />
         </section>
-        <section id="projects">
+        <section id="projects" className="scroll-mt-10">
           <ProjectPage />
         </section>
         <section id="skills">
