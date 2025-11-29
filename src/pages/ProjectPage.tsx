@@ -38,7 +38,7 @@ export const ProjectPage = () => {
                         onClick={() => window.open(project.link, "_blank")}
                         className="h-8 w-8"
                       >
-                        <img src="../public/div/github.svg" alt="github" />
+                        <img src="/div/github.svg" alt="github" />
                       </button>
                     </div>
                     <span className="text-base text-end my-2 md:text-base">
