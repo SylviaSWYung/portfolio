@@ -2,7 +2,7 @@ import { buttonStyle } from "@/lib/classnames";
 
 export const HomePage = () => {
   return (
-    <section id="home" className="pt-20 lg:pt-5">
+    <section id="home" className="pt-20 lg:pt-5 md:pb-10">
       <div className="flex flex-col items-center">
         <img
           className="mx-auto lg:max-w-[900px] object-contain w-full"
