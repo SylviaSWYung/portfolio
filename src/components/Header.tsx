@@ -1,113 +1,79 @@
-import { useState } from "react";
-import HamburgerMenu from "./HamburgerMenu";
-import { useNavigate } from "react-router-dom";
+import { HeaderNavItem } from "@/lib/types";
+import { SheetMenu } from "./SheetMenu";
+import { Link } from "react-router-dom";
+import { useRef } from "react";
+import { motion } from "framer-motion";
+import { useHeaderPill } from "@/lib/hooks/useHeaderPill";
 
-function resume() {
-  window.open("/Resume.pdf", "_blank");
-}
-
-const hover_color = "hover:text-cerise";
-const mobile_text = "block text-black hover:text-cerise";
+const navigation: HeaderNavItem[] = [
+  {
+    title: "Home",
+    href: "/",
+    section: "home",
+  },
+  {
+    title: "About Me",
+    href: "/about",
+    section: "about",
+  },
+  {
+    title: "Work",
+    href: "/work",
+    section: "work",
+  },
+  {
+    title: "Project",
+    href: "/projects",
+    section: "projects",
+  },
+  {
+    title: "Skills",
+    href: "/skills",
+    section: "skills",
+  },
+];
 
 export const Header = () => {
-  const navigate = useNavigate();
-
-  const handleNav = (id: string) => {
-    navigate(`/${id}`);
-  };
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const toggleMenu = () => {
-    setIsExpanded(!isExpanded);
-  };
-
-  const closeMenu = () => {
-    setIsExpanded(false);
-  };
+  const { active } = useHeaderPill(navigation);
+  const itemRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
 
   return (
-    <div className="fixed top-0 left-0 h-20 w-full z-50 bg-background/90 flex flex-row items-center justify-between sm:justify-around">
-      <button
-        onClick={() => {
-          const home = document.getElementById("home");
-          if (home) {
-            home.scrollIntoView({ behavior: "smooth" });
-            window.history.pushState(null, "", "/");
-          }
-        }}
-        className="ml-6 sm:ml-0 font-inria font-bold text-text-dark text-lg md:text-2xl hover:text-cerise"
-      >
-        Sylvia Yung
-      </button>
-      <div className="hidden sm:flex font-inria text-lg md:text-xl text-black gap-16">
-        <button onClick={() => handleNav("about")} className={hover_color}>
-          About me
-        </button>
-        <button onClick={() => handleNav("work")} className={hover_color}>
-          Work
-        </button>
-        <button onClick={() => handleNav("projects")} className={hover_color}>
-          Projects
-        </button>
-        <button onClick={() => handleNav("skills")} className={hover_color}>
-          Skills
-        </button>
+    <header className="sticky top-4 z-50 sm:items-center flex flex-col m-3 gap-2 mx-auto w-[min(1600px,92%)]">
+      {/* Sheet Menu for mobile */}
+      <SheetMenu navItems={navigation} className="sm:hidden" />
+
+      {/* Dekstop version */}
+      <div className="relative hidden sm:flex top-0 items-center rounded-full bg-rose py-4 px-6 overflow-hidden">
+        <nav className="sm:flex hidden justify-around items-center gap-10 text-white text-xl">
+          {navigation.map((item) => (
+            <Link
+              to={item.href}
+              key={item.title}
+              className={
+                "hover:text-text-dark relative transition-colors cursor-pointer z-10 " +
+                (active === item.section ? "text-black" : "text-white")
+              }
+              ref={(el) => {
+                itemRefs.current[item.section] = el;
+              }}
+            >
+              {item.title}
+            </Link>
+          ))}
+
+          {active && (
+            <motion.div
+              layout
+              transition={{ type: "tween", stiffness: 300, damping: 30 }}
+              className="absolute bg-white rounded-full p-5"
+              style={{
+                width: (itemRefs.current[active]?.offsetWidth ?? 0) + 20,
+                left: (itemRefs.current[active]?.offsetLeft ?? 0) + -10,
+              }}
+            />
+          )}
+        </nav>
       </div>
-      <button
-        type="button"
-        onClick={resume}
-        className="font-inria text-base sm:text-lg xl:text-lg text-text-dark font-semibold rounded-full h-8 w-20 sm:w-22 xl:h-10 xl:w-28 bg-cerise/80 shadow-lg ml-25 sm:ml-6 hover:bg-cerise/50"
-      >
-        Resume
-      </button>
-      <button
-        onClick={toggleMenu}
-        type="button"
-        className="items-center mr-4 h-10 justify-center rounded-lg sm:hidden"
-      >
-        <HamburgerMenu />
-      </button>
-      {/* Mobile Dropdown menu */}
-      {isExpanded && (
-        <div className="flex items-center z-50 fixed w-full text-base top-20 justify-evenly bg-background/90 sm:hidden p-8 font-inria">
-          <button
-            onClick={() => {
-              handleNav("about");
-              closeMenu();
-            }}
-            className={mobile_text}
-          >
-            About me
-          </button>
-          <button
-            onClick={() => {
-              handleNav("work");
-              closeMenu();
-            }}
-            className={mobile_text}
-          >
-            Work
-          </button>
-          <button
-            onClick={() => {
-              handleNav("projects");
-              closeMenu();
-            }}
-            className={mobile_text}
-          >
-            Projects
-          </button>
-          <button
-            onClick={() => {
-              handleNav("skills");
-              closeMenu();
-            }}
-            className={mobile_text}
-          >
-            Skills
-          </button>
-        </div>
-      )}
-    </div>
+    </header>
   );
 };

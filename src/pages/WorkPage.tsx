@@ -1,66 +1,40 @@
-export const WorkPage = () => {
-  const works = [
-    {
-      companyname: "Telenor",
-      image: "workpage/telenor.png",
-      position: "Software developer, Backend",
-      about: `Worked as a backend developer during a summer internship, 
-              contributing to an in-house development team focused on 
-              improving existing code and developing a minimum viable 
-              product (MVP). Gained hands-on experience with production-ready code, 
-              testing, and implementation. Actively participated in improving the debugging 
-              and troubleshooting process for customer- and user-reported issues, 
-              leading to more efficient error resolution.`,
-      skills: "Kotlin, React, Kafka, Jenkins, Splunk",
-    },
-    {
-      companyname: "NTNU",
-      image: "workpage/ntnu.png",
-      position: "Student Ambassador",
-      about: `As a Student Ambassador for NTNU from October 2022 to May 2025, 
-      I represented the university during the National University Tour across various 
-      regions including Rogaland, Troms, Finnmark, Bergen, and Trøndelag. 
-      My role involved presenting NTNU’s study programs and student life to over 7,000 
-      upper secondary school students, as well as answering questions to support their 
-      decisions about higher education. In 2024, I served as the team lead for the 
-      Trøndelag tour, where I was responsible for planning, coordinating logistics, 
-      and acting as a liaison between universities and high schools.`,
-      skills: "Project Management, Ambassadorship, Public speaking",
-    },
-  ];
+import { works } from "@/lib/work";
 
+export const WorkPage = () => {
   return (
-    <section id="work" className="pt-20">
-      <div className="flex flex-col flex-wrap mx-auto w-6/7">
-        <p className="font-inria font-bold text-cerise text-2xl sm:text-4xl mb-5">
-          Relevant Experience
-        </p>
+    <section id="work">
+      <div className="flex flex-col">
+        <h2 className="font-semibold text-black italic text-3xl sm:text-5xl mb-5 self-end">
+          Experience.
+        </h2>
+
         <div className="flex justify-center">
-          <div className="flex flex-col xl:flex-row justify-evenly gap-x-10 gap-y-10">
+          <div className="flex flex-col justify-evenly gap-y-5">
             {works.map((work, index) => (
               <div
                 key={index}
-                className="font-inria flex-col justify-items-center border-4 rounded-3xl border-cerise p-5 sm:p-10 max-w-xl"
+                className={`${
+                  index !== works.length - 1 ? "border-b-2 border-rose" : ""
+                } pb-5`}
               >
-                <span className="flex text-cerise text-2xl sm:text-3xl font-bold mb-2">
-                  {work.companyname}
-                </span>
-                <div className="w-32 h-32 flex">
+                <div className="flex flex-col sm:flex-row sm:gap-x-6">
                   <img
                     src={work.image}
                     alt=""
-                    className="w-full h-full object-contain"
+                    className="w-32 h-32 object-contain mx-auto sm:mx-0 self-center"
                   />
+                  <div className="flex flex-col text-center sm:text-left mt-2 sm:mt-0">
+                    <span className="font-bold italic text-center sm:text-end sm:text-xl">
+                      {work.position}
+                    </span>
+                    <span className="text-sm text-justify my-4 md:text-base">
+                      {work.about}
+                    </span>
+                    <span className="font-bold italic text-sm text-center md:text-base">
+                      {work.skills}
+                    </span>
+                  </div>
                 </div>
-                <span className="flex text-base sm:text-xl my-5 font-bold ">
-                  {work.position}
-                </span>
-                <span className="flex text-sm sm:text-base text-center">
-                  {work.about}
-                </span>
-                <span className="flex text-royalblue font-bold italic text-center text-sm sm:text-base mt-5">
-                  {work.skills}
-                </span>
               </div>
             ))}
           </div>

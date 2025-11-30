@@ -1,49 +1,27 @@
-import { motion } from "framer-motion";
-import { AnimatedText } from "../components/AnimatedText";
-import { Star } from "../components/Star";
-
-const buttonStyle =
-  "font-inria text-lg sm:text-2xl text-text-dark rounded-full h-10 w-26 sm:h-12 xl:h-14 sm:w-33 xl:w-38 bg-cerise/80 shadow-lg mx-2 hover:bg-cerise/50";
-const MotionStar = motion.create(Star);
+import { Skeleton } from "@/components/ui/skeleton";
+import { buttonStyle } from "@/lib/classnames";
+import { useState } from "react";
 
 export const HomePage = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <section id="home" className="scroll-mt-20 lg:min-h-screen">
-      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-evenly sm:items-center sm:gap-x-4 sm:max-w-full sm:min-h-[calc(100vh-10rem)]">
-        <div className="relative flex justify-center sm:order-1 md:order-2">
-          <img
-            className="rounded-full mx-auto sm:my-12 max-w-1/2 sm:max-w-sm"
-            src="homepage/Sylvia3.png"
-            alt="Picture of Sylvia"
-          />
-        </div>
+    <section id="home" className="pt-20 md:pb-10">
+      <div className="flex flex-col items-center">
+        {isLoading && (
+          <Skeleton className="mx-auto lg:max-w-[900px] w-full aspect-2158/1506 bg-gray-200" />
+        )}
 
-        {/*Text og button */}
-        <div className="flex flex-col ml-8 mr-8 sm:mr-0 sm:ml-0 sm:order-2 md:order-1 sm:w-full sm:max-w-[400px] xl:max-w-[600px]">
-          <p className="flex justify-center lg:justify-normal font-inria text-black text-4xl xl:text-5xl sm:mb-5">
-            Hi, My name is
-          </p>
-          <p className="flex justify-center font-inria text-cerise text-4xl sm:text-6xl mt-4 mb-6 xl:text-7xl">
-            Sylvia Yung
-          </p>
-          <div className="font-inria flex justify-center sm:h-20 sm:mt-5">
-            {
-              <AnimatedText
-                textArray={[
-                  "Web Developer",
-                  "Cell & Molecular biologist",
-                  "Full-Stack Developer",
-                  "Software Developer",
-                  "Backend Developer",
-                ]}
-                typingSpeed={150}
-                pauseBetweenTexts={2000}
-              />
-            }
-          </div>
+        <img
+          className={`mx-auto lg:max-w-[900px] object-contain w-full ${isLoading ? "hidden" : ""}`}
+          src="homepage/homepage.png"
+          alt="homepage picture"
+          onLoad={() => setIsLoading(false)}
+        />
 
+        <div className="flex items-center justify-center">
           {/*Buttons*/}
-          <div className="flex justify-center mt-10 sm:mt-6">
+          <div className="flex flex-wrap justify-center mt-10 sm:mt-6 gap-6 lg:gap-15">
             <button
               type="button"
               className={buttonStyle}
@@ -62,49 +40,15 @@ export const HomePage = () => {
             >
               GitHub
             </button>
+            <button
+              type="button"
+              className={buttonStyle}
+              onClick={() => window.open("/Resume.pdf", "_blank")}
+            >
+              Resume
+            </button>
           </div>
         </div>
-        {/*I mobil versjon - under buttons. */}
-        <div className="sm:hidden flex flex-row justify-around">
-          <MotionStar
-            className="rotate-12 mt-8 mr-2 size-1/6"
-            animate={{ y: [0, -5, 0] }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-          <MotionStar
-            className="rotate-45 mt-25 size-1/12"
-            animate={{ x: [0, -3, 0] }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        </div>
-        {/*Hidden i mobil versjon, men venstre side av bildet */}
-        <MotionStar
-          className="hidden sm:absolute sm:hidden lg:block lg:w-1/12 lg:h-1/12 lg:top-1/3"
-          animate={{ y: [0, -5, 0] }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        {/*Hidden i mobil versjon, men nedre venstre side av teksten */}
-        <MotionStar
-          className="hidden sm:absolute sm:w-1/5 sm:right-3/8 sm:hidden lg:block lg:right-3/4 sm:top-7/12 sm:-rotate-20"
-          animate={{ y: [0, -5, 0] }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
       </div>
     </section>
   );

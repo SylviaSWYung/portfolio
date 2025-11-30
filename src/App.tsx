@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { HomePage } from "./pages/HomePage";
-import { Header } from "./components/Header";
-import { AboutMePage } from "./pages/AboutMePage";
-import { WorkPage } from "./pages/WorkPage";
-import { ProjectPage } from "./pages/ProjectPage";
-import { SkillsPage } from "./pages/SkillsPage";
-import { Footer } from "./components/Footer";
+import {
+  AboutMePage,
+  HomePage,
+  ProjectPage,
+  SkillsPage,
+  WorkPage,
+} from "./pages";
+import { FlowyText, Footer, Header } from "./components";
 
 export const App = () => {
   const location = useLocation();
@@ -24,25 +25,21 @@ export const App = () => {
   return (
     <>
       <Header />
-      <main className="pt-20 scroll-smooth overflow-x-hidden max-w-7xl mx-auto">
+      <main className="scroll-smooth overflow-x-hidden w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-40 xl:px-50">
         <section id="home" className="scroll-mt-20">
           <HomePage />
         </section>
-        {/* <img
-          src="div/waveStar2.png"
-          alt=""
-          className="w-full max-w-full h-auto"
-        /> */}
-        <section id="about" className="scroll-mt-5">
+        <section id="about">
           <AboutMePage />
         </section>
-        <section id="work" className="scroll-mt-5">
+        <FlowyText />
+        <section id="work" className="scroll-mt-20">
           <WorkPage />
         </section>
-        <section id="projects" className="scroll-mt-5">
+        <section id="projects" className="scroll-mt-10">
           <ProjectPage />
         </section>
-        <section id="skills" className="scroll-mt-5">
+        <section id="skills" className="scroll-mt-6">
           <SkillsPage />
         </section>
       </main>
