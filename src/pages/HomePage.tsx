@@ -6,7 +6,7 @@ export const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <section id="home" className="pt-20 md:pb-10">
+    <section id="home" className="pt-20 md:pt-5 md:pb-10">
       <div className="flex flex-col items-center">
         {isLoading && (
           <Skeleton className="mx-auto lg:max-w-[900px] w-full aspect-2158/1506 bg-gray-200" />
