@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { HomePage } from "./pages/HomePage";
-import { AboutMePage } from "./pages/AboutMePage";
-import { WorkPage } from "./pages/WorkPage";
-import { ProjectPage } from "./pages/ProjectPage";
-import { SkillsPage } from "./pages/SkillsPage";
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
-import { FlowyText } from "./components/FlowyText";
+import {
+  AboutMePage,
+  HomePage,
+  ProjectPage,
+  SkillsPage,
+  WorkPage,
+} from "./pages";
+import { FlowyText, Footer, Header } from "./components";
 
 export const App = () => {
   const location = useLocation();

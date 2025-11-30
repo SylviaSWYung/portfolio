@@ -1,5 +1,4 @@
-import { buttonStyle } from "@/lib/classnames";
-import { projects } from "@/lib/project";
+import { buttonStyle, projects } from "@/lib";
 import { useState } from "react";
 
 export const ProjectPage = () => {

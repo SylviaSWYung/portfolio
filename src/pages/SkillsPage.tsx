@@ -26,10 +26,6 @@ export const SkillsPage = () => {
       <h2 className="font-semibold text-black italic text-3xl sm:text-5xl mb-5">
         Skills.
       </h2>
-      <p className="text-base sm:text-lg m-5 text-center">
-        Not sure what that little icon means? Just hover or tap to reveal the
-        secret!
-      </p>
       <div className="flex gap-5 justify-center flex-col items-end mb-10">
         {skillCategories.map((category) => (
           <div key={category.title} className="">
