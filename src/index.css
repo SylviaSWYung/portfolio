@@ -9,6 +9,7 @@
 body {
   background-color: #e8e8e6;
   font-family: "Inter";
+  overflow-x: hidden;
 }
 
 /* html {
