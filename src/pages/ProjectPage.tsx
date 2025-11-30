@@ -1,13 +1,18 @@
+import { Skeleton } from "@/components/ui/skeleton";
 import { buttonStyle, projects } from "@/lib";
 import { useState } from "react";
 
 export const ProjectPage = () => {
+  const [isLoading, setIsLoading] = useState<Record<number, boolean>>({});
   const [showMore, setShowMore] = useState(false);
   const PREVIEW_COUNT = 3;
   const visibleProjects = showMore
     ? projects
     : projects.slice(0, PREVIEW_COUNT);
 
+  const handleImageLoad = (index: number) => {
+    setIsLoading((prev) => ({ ...prev, [index]: true }));
+  };
   return (
     <section id="projects" className="mt-10">
       <div className="flex flex-col">
@@ -20,10 +25,14 @@ export const ProjectPage = () => {
             {visibleProjects.map((project, index) => (
               <div key={index}>
                 <div className="flex flex-col md:flex-row justify-between sm:gap-4 lg:gap-8">
+                  {!isLoading[index] && (
+                    <Skeleton className="w-full md:w-1/2 md:h-1/2 aspect-2848/1499 border-2 bg-gray-300 rounded-sm" />
+                  )}
                   <img
                     src={project.image}
                     alt=""
-                    className="w-full md:w-1/2 md:h-1/2 border-2 border-gray-300 rounded-sm self-center"
+                    className={`w-full md:w-1/2 md:h-1/2 border-2 border-gray-300 rounded-sm self-center ${!isLoading[index] ? "hidden" : ""}`}
+                    onLoad={() => handleImageLoad(index)}
                   />
                   <div className="flex flex-col text-center my-2 md:w-xl">
                     <span className="font-bold text-rose text-center text-2xl">
