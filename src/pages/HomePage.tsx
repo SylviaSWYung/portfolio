@@ -1,13 +1,22 @@
+import { Skeleton } from "@/components/ui/skeleton";
 import { buttonStyle } from "@/lib/classnames";
+import { useState } from "react";
 
 export const HomePage = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <section id="home" className="pt-20 lg:pt-5 md:pb-10">
+    <section id="home" className="pt-20 md:pb-10">
       <div className="flex flex-col items-center">
+        {isLoading && (
+          <Skeleton className="mx-auto lg:max-w-[900px] w-full aspect-2158/1506 bg-gray-200" />
+        )}
+
         <img
-          className="mx-auto lg:max-w-[900px] object-contain w-full"
+          className={`mx-auto lg:max-w-[900px] object-contain w-full ${isLoading ? "hidden" : ""}`}
           src="homepage/homepage.png"
           alt="homepage picture"
+          onLoad={() => setIsLoading(false)}
         />
 
         <div className="flex items-center justify-center">
