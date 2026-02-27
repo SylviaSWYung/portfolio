@@ -1,5 +1,14 @@
 export const works = [
   {
+    companyname: "Netcompany",
+    image: "workpage/netcompany.png",
+    position: "Associate Consulant",
+    about: `I am currently working as a consultant, developing cloud-based solutions using 
+              Microsoft Azure, Dynamics 365, and C#. This is an ongoing role where I support 
+              clients with system development and integrations.`,
+    skills: "Azure, Dynamics 365, C#, Power Platform",
+  },
+  {
     companyname: "Telenor",
     image: "workpage/telenor.png",
     position: "Software developer, Backend",

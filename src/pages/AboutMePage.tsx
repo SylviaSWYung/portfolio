@@ -16,9 +16,8 @@ export const AboutMePage = () => {
           innovation with aesthetics and enjoy building solutions that are both
           functional and visually appealing. <br />
           <br />
-          In just two years, I've learned so much and can't wait to grow even
-          more. I'm highly motivated, social, and always eager to tackle new
-          challenges!
+          I've learned so much and can't wait to grow even more. I'm highly
+          motivated, social, and always eager to tackle new challenges!
         </p>
         <img
           src="aboutme/aboutme.png"
